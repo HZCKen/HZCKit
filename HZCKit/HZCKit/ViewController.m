@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "HZCKit.h"
+
 
 @interface ViewController ()
 
@@ -17,6 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 370, 44)];
+    label.textColor = [UIColor hzc_randomColor];
+    [self.view addSubview:label];
+    label.font = [UIFont systemFontOfSize:15];
+    label.numberOfLines = 0;
+    NSString *info = @"但是公司的高度是广东省公司的广东省高速度来开个大帅哥多撒谎个爱好就跟他说噶三公司噶是的刚好是我哥如果黑暗如果坏都干撒降低公司及嘎斯进欧冠赛欧结果就赛欧国际韶关；可垃圾费；阿尔加两块；三个身高萨嘎干撒的公司的高度上收到公司的公司都给ID搜狗破is打个屁偶是东莞IP手动皮革是滴哦苹果是滴哦苹果度搜皮为欧公司的漂漂是第三个是干撒噶是的噶虽然刚撒旦个撒公司的公司的高度";
+    
+
+    NSMutableAttributedString *attStirng = [NSMutableAttributedString hzc_getColorAttributedStringWithString:info rangeOfString:@"公司" textColor:[UIColor redColor]];
+    label.attributedText = attStirng;
+    [label sizeToFit];
 }
 
 

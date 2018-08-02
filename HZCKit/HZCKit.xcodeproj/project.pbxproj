@@ -15,6 +15,11 @@
 		186DAACE211295DF004DCEFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAACD211295DF004DCEFC /* main.m */; };
 		186DAAD8211295DF004DCEFC /* HZCKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAD7211295DF004DCEFC /* HZCKitTests.m */; };
 		186DAAE3211295DF004DCEFC /* HZCKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAE2211295DF004DCEFC /* HZCKitUITests.m */; };
+		186DAB012112990E004DCEFC /* UIImage+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAFA2112990D004DCEFC /* UIImage+HZCKit.m */; };
+		186DAB022112990E004DCEFC /* NSMutableAttributedString+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAFB2112990D004DCEFC /* NSMutableAttributedString+HZCKit.m */; };
+		186DAB032112990E004DCEFC /* UIColor+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAFD2112990D004DCEFC /* UIColor+HZCKit.m */; };
+		186DAB042112990E004DCEFC /* NSString+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAFE2112990D004DCEFC /* NSString+HZCKit.m */; };
+		186DAB0A21129B47004DCEFC /* UILabel+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,17 @@
 		186DAADE211295DF004DCEFC /* HZCKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HZCKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		186DAAE2211295DF004DCEFC /* HZCKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCKitUITests.m; sourceTree = "<group>"; };
 		186DAAE4211295DF004DCEFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		186DAAF92112990C004DCEFC /* UIImage+HZCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HZCKit.h"; sourceTree = "<group>"; };
+		186DAAFA2112990D004DCEFC /* UIImage+HZCKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HZCKit.m"; sourceTree = "<group>"; };
+		186DAAFB2112990D004DCEFC /* NSMutableAttributedString+HZCKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+HZCKit.m"; sourceTree = "<group>"; };
+		186DAAFC2112990D004DCEFC /* NSString+HZCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HZCKit.h"; sourceTree = "<group>"; };
+		186DAAFD2112990D004DCEFC /* UIColor+HZCKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HZCKit.m"; sourceTree = "<group>"; };
+		186DAAFE2112990D004DCEFC /* NSString+HZCKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HZCKit.m"; sourceTree = "<group>"; };
+		186DAAFF2112990D004DCEFC /* UIColor+HZCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HZCKit.h"; sourceTree = "<group>"; };
+		186DAB002112990E004DCEFC /* NSMutableAttributedString+HZCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+HZCKit.h"; sourceTree = "<group>"; };
+		186DAB05211299B6004DCEFC /* HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCKit.h; sourceTree = "<group>"; };
+		186DAB0821129B47004DCEFC /* UILabel+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+HZCKit.h"; sourceTree = "<group>"; };
+		186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HZCKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +152,17 @@
 		186DAAF0211295F9004DCEFC /* HZCKit */ = {
 			isa = PBXGroup;
 			children = (
+				186DAB05211299B6004DCEFC /* HZCKit.h */,
+				186DAB002112990E004DCEFC /* NSMutableAttributedString+HZCKit.h */,
+				186DAAFB2112990D004DCEFC /* NSMutableAttributedString+HZCKit.m */,
+				186DAAFC2112990D004DCEFC /* NSString+HZCKit.h */,
+				186DAAFE2112990D004DCEFC /* NSString+HZCKit.m */,
+				186DAAFF2112990D004DCEFC /* UIColor+HZCKit.h */,
+				186DAAFD2112990D004DCEFC /* UIColor+HZCKit.m */,
+				186DAAF92112990C004DCEFC /* UIImage+HZCKit.h */,
+				186DAAFA2112990D004DCEFC /* UIImage+HZCKit.m */,
+				186DAB0821129B47004DCEFC /* UILabel+HZCKit.h */,
+				186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */,
 			);
 			path = HZCKit;
 			sourceTree = "<group>";
@@ -270,9 +297,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186DAB022112990E004DCEFC /* NSMutableAttributedString+HZCKit.m in Sources */,
+				186DAB0A21129B47004DCEFC /* UILabel+HZCKit.m in Sources */,
+				186DAB012112990E004DCEFC /* UIImage+HZCKit.m in Sources */,
 				186DAAC3211295DA004DCEFC /* ViewController.m in Sources */,
 				186DAACE211295DF004DCEFC /* main.m in Sources */,
+				186DAB032112990E004DCEFC /* UIColor+HZCKit.m in Sources */,
 				186DAAC0211295DA004DCEFC /* AppDelegate.m in Sources */,
+				186DAB042112990E004DCEFC /* NSString+HZCKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
