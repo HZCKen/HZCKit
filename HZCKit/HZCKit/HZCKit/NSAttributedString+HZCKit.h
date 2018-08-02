@@ -14,7 +14,7 @@
  单删除线
 
  @param originalString 原始
- @return <#return value description#>
+ @return 带有删除线的富文本
  */
 + (NSAttributedString *)hzc_strikethroughStyleSingle:(NSString *)originalString;
 
