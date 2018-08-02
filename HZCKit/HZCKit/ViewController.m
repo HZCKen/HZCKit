@@ -38,7 +38,8 @@
 //    [attString hzc_changeFontSizeString:@"但是" fontSize:17];
 //    [attString hzc_changeFontSizeString:@"垃圾" fontName:@"HelveticaNeue-Bold" fontSize:20];
     //    NSMutableAttributedString *attString = [NSMutableAttributedString hzc_getFontSizeString:info rangeOfString:@"高度" fontSize:30];
-    NSMutableAttributedString *attString = [NSMutableAttributedString hzc_getFontSizeString:info rangeOfString:@"高度" fontName:@"HelveticaNeue-Bold" fontSize:30];
+//    NSMutableAttributedString *attString = [NSMutableAttributedString hzc_getFontSizeString:info rangeOfString:@"高度" fontName:@"HelveticaNeue-Bold" fontSize:30];
+    NSAttributedString *attString = [NSAttributedString hzc_strikethroughStyleSingle:info];
     label.attributedText = attString;
     [label sizeToFit];
 }

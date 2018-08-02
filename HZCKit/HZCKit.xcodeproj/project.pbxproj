@@ -20,6 +20,7 @@
 		186DAB032112990E004DCEFC /* UIColor+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAFD2112990D004DCEFC /* UIColor+HZCKit.m */; };
 		186DAB042112990E004DCEFC /* NSString+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAFE2112990D004DCEFC /* NSString+HZCKit.m */; };
 		186DAB0A21129B47004DCEFC /* UILabel+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */; };
+		186DAB0D2112D370004DCEFC /* NSAttributedString+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		186DAB05211299B6004DCEFC /* HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCKit.h; sourceTree = "<group>"; };
 		186DAB0821129B47004DCEFC /* UILabel+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+HZCKit.h"; sourceTree = "<group>"; };
 		186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HZCKit.m"; sourceTree = "<group>"; };
+		186DAB0B2112D370004DCEFC /* NSAttributedString+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+HZCKit.h"; sourceTree = "<group>"; };
+		186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+HZCKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 				186DAAFA2112990D004DCEFC /* UIImage+HZCKit.m */,
 				186DAB0821129B47004DCEFC /* UILabel+HZCKit.h */,
 				186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */,
+				186DAB0B2112D370004DCEFC /* NSAttributedString+HZCKit.h */,
+				186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */,
 			);
 			path = HZCKit;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				186DAB0A21129B47004DCEFC /* UILabel+HZCKit.m in Sources */,
 				186DAB012112990E004DCEFC /* UIImage+HZCKit.m in Sources */,
 				186DAAC3211295DA004DCEFC /* ViewController.m in Sources */,
+				186DAB0D2112D370004DCEFC /* NSAttributedString+HZCKit.m in Sources */,
 				186DAACE211295DF004DCEFC /* main.m in Sources */,
 				186DAB032112990E004DCEFC /* UIColor+HZCKit.m in Sources */,
 				186DAAC0211295DA004DCEFC /* AppDelegate.m in Sources */,
