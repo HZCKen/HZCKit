@@ -21,6 +21,7 @@
 		186DAB042112990E004DCEFC /* NSString+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAFE2112990D004DCEFC /* NSString+HZCKit.m */; };
 		186DAB0A21129B47004DCEFC /* UILabel+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */; };
 		186DAB0D2112D370004DCEFC /* NSAttributedString+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */; };
+		1878F83F211C17A100B423F9 /* NSObject+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1878F83E211C17A100B423F9 /* NSObject+HZCKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HZCKit.m"; sourceTree = "<group>"; };
 		186DAB0B2112D370004DCEFC /* NSAttributedString+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+HZCKit.h"; sourceTree = "<group>"; };
 		186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+HZCKit.m"; sourceTree = "<group>"; };
+		1878F83D211C17A100B423F9 /* NSObject+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HZCKit.h"; sourceTree = "<group>"; };
+		1878F83E211C17A100B423F9 /* NSObject+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HZCKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 				186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */,
 				186DAB0B2112D370004DCEFC /* NSAttributedString+HZCKit.h */,
 				186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */,
+				1878F83D211C17A100B423F9 /* NSObject+HZCKit.h */,
+				1878F83E211C17A100B423F9 /* NSObject+HZCKit.m */,
 			);
 			path = HZCKit;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1878F83F211C17A100B423F9 /* NSObject+HZCKit.m in Sources */,
 				186DAB022112990E004DCEFC /* NSMutableAttributedString+HZCKit.m in Sources */,
 				186DAB0A21129B47004DCEFC /* UILabel+HZCKit.m in Sources */,
 				186DAB012112990E004DCEFC /* UIImage+HZCKit.m in Sources */,
