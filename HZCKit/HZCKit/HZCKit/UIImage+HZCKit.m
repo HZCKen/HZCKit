@@ -25,6 +25,14 @@
     return img;
 }
 
+/** 获取没有被渲染的原图 */
++ (UIImage *)hzc_imageAlwaysOriginalNamed:(NSString *)imageName {
+
+    UIImage *image = [UIImage imageNamed:imageName];
+
+    return [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
 /** 绘制图片圆角 */
 - (UIImage *)hzc_drawCornerInRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius {
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
