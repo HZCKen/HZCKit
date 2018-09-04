@@ -34,4 +34,20 @@
  */
 - (BOOL)hzc_isChineseCharacter;
 
+
+/**
+ 汉语数字转化为阿拉伯数字 (十万以上有问题)
+
+ @return 阿拉伯数字
+ */
+- (NSString *)hzc_translatArabicNumberals;
+
+
+/**
+ 阿拉伯数字转换为汉语数字
+
+ @return 汉语数字
+ */
+- (NSString *)hzc_translatChinestNumberals;
+
 @end
