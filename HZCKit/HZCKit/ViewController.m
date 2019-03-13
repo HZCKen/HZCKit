@@ -13,20 +13,20 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"textView %@", [testView hzc_className]);
-    testView *test = [testView hzc_loadNib];
-    
-    [self.view addSubview:test];
-//    test.frame = CGRectMake(100, 100, 100, 100);
-    
-    
-//    [self test1];
+
+//    [self.searchBar hzc_setCancelButtonTitle:@"123"];
+    UIButton *cancel  = [self.searchBar hzc_getCancelButton];
+    [cancel setTitle:@"test" forState:(UIControlStateNormal)];
+    [cancel setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
 }
 
 - (void)test1 {

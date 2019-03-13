@@ -22,6 +22,8 @@
 		186DAB0A21129B47004DCEFC /* UILabel+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */; };
 		186DAB0D2112D370004DCEFC /* NSAttributedString+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */; };
 		1878F83F211C17A100B423F9 /* NSObject+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1878F83E211C17A100B423F9 /* NSObject+HZCKit.m */; };
+		18953EC72238FCA7001308FC /* UITableView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953EC62238FCA7001308FC /* UITableView+HZCKit.m */; };
+		18953ECA223902AE001308FC /* UISearchBar+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953EC9223902AE001308FC /* UISearchBar+HZCKit.m */; };
 		18EAF76221CCE28A009660C1 /* UIView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF76121CCE28A009660C1 /* UIView+HZCKit.m */; };
 		18EAF76521CCE684009660C1 /* testView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF76421CCE684009660C1 /* testView.m */; };
 		18EAF76921CCEAA5009660C1 /* testView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EAF76821CCEAA5009660C1 /* testView.xib */; };
@@ -76,6 +78,10 @@
 		186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+HZCKit.m"; sourceTree = "<group>"; };
 		1878F83D211C17A100B423F9 /* NSObject+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HZCKit.h"; sourceTree = "<group>"; };
 		1878F83E211C17A100B423F9 /* NSObject+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HZCKit.m"; sourceTree = "<group>"; };
+		18953EC52238FCA7001308FC /* UITableView+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+HZCKit.h"; sourceTree = "<group>"; };
+		18953EC62238FCA7001308FC /* UITableView+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HZCKit.m"; sourceTree = "<group>"; };
+		18953EC8223902AE001308FC /* UISearchBar+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+HZCKit.h"; sourceTree = "<group>"; };
+		18953EC9223902AE001308FC /* UISearchBar+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+HZCKit.m"; sourceTree = "<group>"; };
 		18EAF76021CCE28A009660C1 /* UIView+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HZCKit.h"; sourceTree = "<group>"; };
 		18EAF76121CCE28A009660C1 /* UIView+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HZCKit.m"; sourceTree = "<group>"; };
 		18EAF76321CCE684009660C1 /* testView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testView.h; sourceTree = "<group>"; };
@@ -186,6 +192,10 @@
 				1878F83E211C17A100B423F9 /* NSObject+HZCKit.m */,
 				18EAF76021CCE28A009660C1 /* UIView+HZCKit.h */,
 				18EAF76121CCE28A009660C1 /* UIView+HZCKit.m */,
+				18953EC52238FCA7001308FC /* UITableView+HZCKit.h */,
+				18953EC62238FCA7001308FC /* UITableView+HZCKit.m */,
+				18953EC8223902AE001308FC /* UISearchBar+HZCKit.h */,
+				18953EC9223902AE001308FC /* UISearchBar+HZCKit.m */,
 			);
 			path = HZCKit;
 			sourceTree = "<group>";
@@ -321,6 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18953ECA223902AE001308FC /* UISearchBar+HZCKit.m in Sources */,
+				18953EC72238FCA7001308FC /* UITableView+HZCKit.m in Sources */,
 				18EAF76521CCE684009660C1 /* testView.m in Sources */,
 				1878F83F211C17A100B423F9 /* NSObject+HZCKit.m in Sources */,
 				186DAB022112990E004DCEFC /* NSMutableAttributedString+HZCKit.m in Sources */,

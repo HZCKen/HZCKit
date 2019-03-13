@@ -15,3 +15,5 @@
 #import "NSAttributedString+HZCKit.h"
 #import "NSObject+HZCKit.h"
 #import "UIView+HZCKit.h"
+#import "UITableView+HZCKit.h"
+#import "UISearchBar+HZCKit.h"
