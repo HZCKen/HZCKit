@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "HZCKit.h"
 
+#import "testView.h"
 
 @interface ViewController ()
 
@@ -18,20 +19,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self test1];
+    NSLog(@"textView %@", [testView hzc_className]);
+    testView *test = [testView hzc_loadNib];
+    
+    [self.view addSubview:test];
+//    test.frame = CGRectMake(100, 100, 100, 100);
+    
+    
+//    [self test1];
 }
 
 - (void)test1 {
     // Do any additional setup after loading the view, typically from a nib.
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 370, 44)];
-    label.textColor = [UIColor blackColor];
-    [self.view addSubview:label];
-    label.font = [UIFont systemFontOfSize:15];
-    label.numberOfLines = 0;
-    
-    NSString *num = @"我是一百";
-    NSString *numString = [num hzc_translatArabicNumberals];
-    label.text = numString;
+//    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 370, 44)];
+//    label.textColor = [UIColor blackColor];
+//    [self.view addSubview:label];
+//    label.font = [UIFont systemFontOfSize:15];
+//    label.numberOfLines = 0;
+//
+//    NSString *num = @"我是一百";
+//    NSString *numString = [num hzc_translatArabicNumberals];
+//    label.text = numString;
 //
 //    bool isChinese = [num hzc_isChineseCharacter];
     

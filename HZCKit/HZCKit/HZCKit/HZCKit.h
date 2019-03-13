@@ -14,3 +14,4 @@
 #import "NSMutableAttributedString+HZCKit.h"
 #import "NSAttributedString+HZCKit.h"
 #import "NSObject+HZCKit.h"
+#import "UIView+HZCKit.h"

@@ -22,6 +22,9 @@
 		186DAB0A21129B47004DCEFC /* UILabel+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */; };
 		186DAB0D2112D370004DCEFC /* NSAttributedString+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */; };
 		1878F83F211C17A100B423F9 /* NSObject+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1878F83E211C17A100B423F9 /* NSObject+HZCKit.m */; };
+		18EAF76221CCE28A009660C1 /* UIView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF76121CCE28A009660C1 /* UIView+HZCKit.m */; };
+		18EAF76521CCE684009660C1 /* testView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF76421CCE684009660C1 /* testView.m */; };
+		18EAF76921CCEAA5009660C1 /* testView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EAF76821CCEAA5009660C1 /* testView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,11 @@
 		186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+HZCKit.m"; sourceTree = "<group>"; };
 		1878F83D211C17A100B423F9 /* NSObject+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HZCKit.h"; sourceTree = "<group>"; };
 		1878F83E211C17A100B423F9 /* NSObject+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HZCKit.m"; sourceTree = "<group>"; };
+		18EAF76021CCE28A009660C1 /* UIView+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HZCKit.h"; sourceTree = "<group>"; };
+		18EAF76121CCE28A009660C1 /* UIView+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HZCKit.m"; sourceTree = "<group>"; };
+		18EAF76321CCE684009660C1 /* testView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testView.h; sourceTree = "<group>"; };
+		18EAF76421CCE684009660C1 /* testView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testView.m; sourceTree = "<group>"; };
+		18EAF76821CCEAA5009660C1 /* testView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +141,9 @@
 				186DAAC9211295DF004DCEFC /* LaunchScreen.storyboard */,
 				186DAACC211295DF004DCEFC /* Info.plist */,
 				186DAACD211295DF004DCEFC /* main.m */,
+				18EAF76321CCE684009660C1 /* testView.h */,
+				18EAF76421CCE684009660C1 /* testView.m */,
+				18EAF76821CCEAA5009660C1 /* testView.xib */,
 			);
 			path = HZCKit;
 			sourceTree = "<group>";
@@ -173,6 +184,8 @@
 				186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */,
 				1878F83D211C17A100B423F9 /* NSObject+HZCKit.h */,
 				1878F83E211C17A100B423F9 /* NSObject+HZCKit.m */,
+				18EAF76021CCE28A009660C1 /* UIView+HZCKit.h */,
+				18EAF76121CCE28A009660C1 /* UIView+HZCKit.m */,
 			);
 			path = HZCKit;
 			sourceTree = "<group>";
@@ -280,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EAF76921CCEAA5009660C1 /* testView.xib in Resources */,
 				186DAACB211295DF004DCEFC /* LaunchScreen.storyboard in Resources */,
 				186DAAC8211295DF004DCEFC /* Assets.xcassets in Resources */,
 				186DAAC6211295DA004DCEFC /* Main.storyboard in Resources */,
@@ -307,8 +321,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EAF76521CCE684009660C1 /* testView.m in Sources */,
 				1878F83F211C17A100B423F9 /* NSObject+HZCKit.m in Sources */,
 				186DAB022112990E004DCEFC /* NSMutableAttributedString+HZCKit.m in Sources */,
+				18EAF76221CCE28A009660C1 /* UIView+HZCKit.m in Sources */,
 				186DAB0A21129B47004DCEFC /* UILabel+HZCKit.m in Sources */,
 				186DAB012112990E004DCEFC /* UIImage+HZCKit.m in Sources */,
 				186DAAC3211295DA004DCEFC /* ViewController.m in Sources */,
