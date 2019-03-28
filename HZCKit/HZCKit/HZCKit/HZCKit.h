@@ -17,3 +17,4 @@
 #import "UIView+HZCKit.h"
 #import "UITableView+HZCKit.h"
 #import "UISearchBar+HZCKit.h"
+#import "UIButton+HZCKit.h"

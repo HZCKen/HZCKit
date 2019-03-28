@@ -17,6 +17,7 @@
 
 /** <#Description#> */
 @property (nonatomic, strong) UIButton *button;
+@property (weak, nonatomic) IBOutlet UIButton *button2;
 
 @end
 
@@ -25,19 +26,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    [self.searchBar hzc_setCancelButtonTitle:@"123"];
-//    UIButton *cancel  = [self.searchBar hzc_getCancelButton];
-//    [cancel setTitle:@"test" forState:(UIControlStateNormal)];
-//    [cancel setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
+
     
-//    [self.searchBar hzc_setCancelButtonTitle:@"哈哈"];
-//    [self.searchBar hzc_setCancelButtonFont:[UIFont systemFontOfSize:30]];
-//
-//    [self.searchBar hzc_setTextColor:[UIColor blueColor]];
-//    [self.searchBar hzc_setTextFont:[UIFont systemFontOfSize:20]];
+    [self.button2 hzc_centerImageAndTitle];
     
+
+}
+
+- (void)clickButton {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+//监控文本变化
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    self.button.hidden = searchText.length > 0;
+}
+
+- (void)test2 {
+    //    [self.searchBar hzc_setCancelButtonTitle:@"123"];
+    //    UIButton *cancel  = [self.searchBar hzc_getCancelButton];
+    //    [cancel setTitle:@"test" forState:(UIControlStateNormal)];
+    //    [cancel setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
     
-    
+    //    [self.searchBar hzc_setCancelButtonTitle:@"哈哈"];
+    //    [self.searchBar hzc_setCancelButtonFont:[UIFont systemFontOfSize:30]];
+    //
+    //    [self.searchBar hzc_setTextColor:[UIColor blueColor]];
+    //    [self.searchBar hzc_setTextFont:[UIFont systemFontOfSize:20]];
     UITextField *textField = [self.searchBar hzc_getTextField];
     if (textField) {
         [textField setBackgroundColor:[UIColor whiteColor]];
@@ -57,15 +72,6 @@
     [button addTarget:self action:@selector(clickButton) forControlEvents:(UIControlEventTouchUpInside)];
     self.button = button;
     self.searchBar.delegate = self;
-}
-
-- (void)clickButton {
-    NSLog(@"%s", __FUNCTION__);
-}
-
-//监控文本变化
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    self.button.hidden = searchText.length > 0;
 }
 
 
