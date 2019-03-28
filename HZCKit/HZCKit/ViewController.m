@@ -11,10 +11,12 @@
 
 #import "testView.h"
 
-@interface ViewController ()
+@interface ViewController ()<UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
+/** <#Description#> */
+@property (nonatomic, strong) UIButton *button;
 
 @end
 
@@ -24,10 +26,48 @@
     [super viewDidLoad];
 
 //    [self.searchBar hzc_setCancelButtonTitle:@"123"];
-    UIButton *cancel  = [self.searchBar hzc_getCancelButton];
-    [cancel setTitle:@"test" forState:(UIControlStateNormal)];
-    [cancel setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
+//    UIButton *cancel  = [self.searchBar hzc_getCancelButton];
+//    [cancel setTitle:@"test" forState:(UIControlStateNormal)];
+//    [cancel setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
+    
+//    [self.searchBar hzc_setCancelButtonTitle:@"哈哈"];
+//    [self.searchBar hzc_setCancelButtonFont:[UIFont systemFontOfSize:30]];
+//
+//    [self.searchBar hzc_setTextColor:[UIColor blueColor]];
+//    [self.searchBar hzc_setTextFont:[UIFont systemFontOfSize:20]];
+    
+    
+    
+    UITextField *textField = [self.searchBar hzc_getTextField];
+    if (textField) {
+        [textField setBackgroundColor:[UIColor whiteColor]];
+        textField.layer.cornerRadius = 14.0f;
+        textField.layer.borderColor = [UIColor colorWithRed:247/255.0 green:75/255.0 blue:31/255.0 alpha:1].CGColor;
+        textField.layer.borderWidth = 1;
+        textField.layer.masksToBounds = YES;
+    }
+    
+    [self.searchBar hzc_setBackgroundColor:[UIColor brownColor]];
+    
+    [self.searchBar hzc_setIconImageName:@"search"];
+    
+    [self.searchBar hzc_setTextFieldTintColor:[UIColor yellowColor]];
+    
+    UIButton *button = [self.searchBar hzc_addRightButton:@"search"];
+    [button addTarget:self action:@selector(clickButton) forControlEvents:(UIControlEventTouchUpInside)];
+    self.button = button;
+    self.searchBar.delegate = self;
 }
+
+- (void)clickButton {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+//监控文本变化
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    self.button.hidden = searchText.length > 0;
+}
+
 
 - (void)test1 {
     // Do any additional setup after loading the view, typically from a nib.
