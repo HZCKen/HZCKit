@@ -10,6 +10,15 @@
 
 @implementation NSObject (HZCKit)
 
+- (void)hzc_setStatusBarBackgroundColor:(UIColor *)color {
+
+    UIView *statusBarWindow = [[UIApplication sharedApplication] valueForKey:@"statusBarWindow"];
+    UIView *statusBar = [statusBarWindow valueForKey:@"statusBar"];
+    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+        statusBar.backgroundColor = color;
+    }
+}
+
 - (UIViewController *)hzc_currentViewController {
     UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
     while (1) {

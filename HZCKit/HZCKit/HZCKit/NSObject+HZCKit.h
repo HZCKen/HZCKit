@@ -10,6 +10,8 @@
 
 @interface NSObject (HZCKit)
 
+- (void)hzc_setStatusBarBackgroundColor:(UIColor *)color;
+
 - (UIViewController *)hzc_currentViewController;
 
 - (UINavigationController *)hzc_currentNavigationController;
