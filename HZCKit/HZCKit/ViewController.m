@@ -18,6 +18,7 @@
 /** <#Description#> */
 @property (nonatomic, strong) UIButton *button;
 @property (weak, nonatomic) IBOutlet UIButton *button2;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -29,7 +30,7 @@
 
     
     [self.button2 hzc_centerImageAndTitle];
-    
+    self.imageView.image = [self.view hzc_getScreenshot];
 
 }
 

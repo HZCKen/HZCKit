@@ -10,6 +10,8 @@
 
 @interface UIView (HZCKit)
 
+- (UIImage *)hzc_getScreenshot;
+
 + (NSString *)hzc_className;
 
 + (instancetype)hzc_loadNib;

@@ -10,6 +10,16 @@
 
 @implementation UIView (HZCKit)
 
+- (UIImage *)hzc_getScreenshot {
+    UIGraphicsBeginImageContext(CGSizeMake(self.frame.size.width, self.frame.size.height));
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [self.layer renderInContext:context];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
 
 + (NSString *)hzc_className {
     return  [self description];
