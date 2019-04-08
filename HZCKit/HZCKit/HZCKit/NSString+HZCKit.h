@@ -50,4 +50,16 @@
  */
 - (NSString *)hzc_translatChinestNumberals;
 
+///获取当前时间
++ (NSString *)hzc_currentDate;
+
+/** 获取当前时间戳 */
++ (NSString *)hzc_currentTime;
+
+/** 时间戳转时间,时间戳为13位是精确到毫秒的*/
+- (NSString *)hzc_getDateString;
+
+/** 字符串转时间戳 如：2017-4-10 17:15:10 */
+- (NSString *)hzc_getTimeString;
+
 @end

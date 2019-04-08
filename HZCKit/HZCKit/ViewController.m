@@ -26,11 +26,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-
+//2019/04/08 10:39:35   1554691175097
+    NSString *timeString = [NSString hzc_currentDate];
+    NSString *dateString = [timeString hzc_getTimeString];
+    NSLog(@"%@ %@", timeString, dateString);
     
-    [self.button2 hzc_centerImageAndTitle];
-    self.imageView.image = [self.view hzc_getScreenshot];
+    timeString = [dateString hzc_getDateString];
+    NSLog(@"%@", timeString);
+    
+//    [self.button2 hzc_centerImageAndTitle];
+//    self.imageView.image = [self.view hzc_getScreenshot];
 
 }
 
