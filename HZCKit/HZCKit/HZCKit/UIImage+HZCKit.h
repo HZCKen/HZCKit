@@ -19,4 +19,6 @@
 - (UIImage *)hzc_drawCircleInRect:(CGRect)rect;
 /** 压缩图片 */
 - (UIImage *)hzc_thumImage:(CGSize)size;
+/** 异步解码图片 */
++ (void)hzc_imageAsyncDecodedWithImageName:(NSString *)imageName finishedBlock:(void(^)(UIImage *image))finishedBlock;
 @end
