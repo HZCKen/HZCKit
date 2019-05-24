@@ -10,6 +10,7 @@
 #import "HZCKit.h"
 
 #import "testView.h"
+#import "HZCMenuLabel.h"
 
 @interface ViewController ()<UISearchBarDelegate>
 
@@ -26,16 +27,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//2019/04/08 10:39:35   1554691175097
-    NSString *timeString = [NSString hzc_currentDate];
-    NSString *dateString = [timeString hzc_getTimeString];
-    NSLog(@"%@ %@", timeString, dateString);
+    HZCMenuLabel *label = [[HZCMenuLabel alloc]initWithFrame:CGRectMake(100, 100, 200, 20)];
+    label.textColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+    label.text = @"我是Label";
+    [self.view addSubview:label];
     
-    timeString = [dateString hzc_getDateString];
-    NSLog(@"%@", timeString);
-    
-//    [self.button2 hzc_centerImageAndTitle];
-//    self.imageView.image = [self.view hzc_getScreenshot];
 
 }
 

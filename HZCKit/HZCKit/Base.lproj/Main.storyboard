@@ -25,17 +25,6 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="xUv-0u-2LN">
-                                <rect key="frame" x="55" y="306" width="270" height="249"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9k-OQ-OSU">
-                                <rect key="frame" x="55" y="98" width="244" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="fs fas" image="search">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -46,8 +35,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="button2" destination="R9k-OQ-OSU" id="2ap-gC-6xS"/>
-                        <outlet property="imageView" destination="xUv-0u-2LN" id="9UQ-xg-okq"/>
                         <outlet property="searchBar" destination="IhC-ev-SUg" id="oeD-XB-eh4"/>
                     </connections>
                 </viewController>
@@ -56,7 +43,4 @@
             <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="search" width="200" height="200"/>
-    </resources>
 </document>
