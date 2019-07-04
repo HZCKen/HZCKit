@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181ABE4322CDA96500EA1B15 /* NSArray+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ABE4222CDA96500EA1B15 /* NSArray+HZCKit.m */; };
 		181E8D59224C9BE8007DDDC5 /* UIButton+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 181E8D58224C9BE8007DDDC5 /* UIButton+HZCKit.m */; };
 		186DAAC0211295DA004DCEFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAABF211295DA004DCEFC /* AppDelegate.m */; };
 		186DAAC3211295DA004DCEFC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAC2211295DA004DCEFC /* ViewController.m */; };
@@ -49,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181ABE4122CDA96500EA1B15 /* NSArray+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+HZCKit.h"; sourceTree = "<group>"; };
+		181ABE4222CDA96500EA1B15 /* NSArray+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HZCKit.m"; sourceTree = "<group>"; };
 		181E8D57224C9BE8007DDDC5 /* UIButton+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+HZCKit.h"; sourceTree = "<group>"; };
 		181E8D58224C9BE8007DDDC5 /* UIButton+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+HZCKit.m"; sourceTree = "<group>"; };
 		186DAABB211295DA004DCEFC /* HZCKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZCKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +209,8 @@
 				181E8D58224C9BE8007DDDC5 /* UIButton+HZCKit.m */,
 				188D442A2297A0C1001EFAAC /* HZCMenuLabel.h */,
 				188D442B2297A0C1001EFAAC /* HZCMenuLabel.m */,
+				181ABE4122CDA96500EA1B15 /* NSArray+HZCKit.h */,
+				181ABE4222CDA96500EA1B15 /* NSArray+HZCKit.m */,
 			);
 			path = HZCKit;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 				186DAB0A21129B47004DCEFC /* UILabel+HZCKit.m in Sources */,
 				186DAB012112990E004DCEFC /* UIImage+HZCKit.m in Sources */,
 				186DAAC3211295DA004DCEFC /* ViewController.m in Sources */,
+				181ABE4322CDA96500EA1B15 /* NSArray+HZCKit.m in Sources */,
 				186DAB0D2112D370004DCEFC /* NSAttributedString+HZCKit.m in Sources */,
 				181E8D59224C9BE8007DDDC5 /* UIButton+HZCKit.m in Sources */,
 				186DAACE211295DF004DCEFC /* main.m in Sources */,
