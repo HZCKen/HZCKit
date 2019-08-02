@@ -252,4 +252,83 @@
     return timeStr;
 }
 
+//普通字符串转换为十六进制的。
+- (NSString *)hzc_changeHexString {
+
+    NSData *myD = [self dataUsingEncoding:NSUTF8StringEncoding];
+    Byte *bytes = (Byte *)[myD bytes];
+    //下面是Byte 转换为16进制。
+    NSString *hexStr=@"";
+    for(int i=0;i<[myD length];i++)
+    {
+        NSString *newHexStr = [NSString stringWithFormat:@"%x",bytes[i]&0xff];///16进制数
+        if([newHexStr length]==1)
+            hexStr = [NSString stringWithFormat:@"%@0%@",hexStr,newHexStr];
+        else
+            hexStr = [NSString stringWithFormat:@"%@%@",hexStr,newHexStr];
+    }
+    return hexStr;
+}
+
++ (NSString *)hzc_hexStringFromString:(NSString *)string {
+    return [string hzc_changeHexString];
+}
+
+- (NSString *)hzc_hexStringChangeString {
+    
+    char *myBuffer = (char *)malloc((int)[self length] / 2 + 1);
+    bzero(myBuffer, [self length] / 2 + 1);
+    for (int i = 0; i < [self length] - 1; i += 2) {
+        unsigned int anInt;
+        NSString * hexCharStr = [self substringWithRange:NSMakeRange(i, 2)];
+        NSScanner * scanner = [[NSScanner alloc] initWithString:hexCharStr];
+        [scanner scanHexInt:&anInt];
+        myBuffer[i / 2] = (char)anInt;
+    }
+    NSString *unicodeString = [NSString stringWithCString:myBuffer encoding:4];
+//    NSLog(@"------字符串=======%@",unicodeString);
+    return unicodeString;
+}
+
++ (NSString *)hzc_stringFromHexString:(NSString *)hexString {
+    return [hexString hzc_hexStringChangeString];
+}
+
++ (NSString *)hzc_hexStringFormData:(NSData *)data {
+    return [[[[NSString stringWithFormat:@"%@",data]
+              stringByReplacingOccurrencesOfString:@"<" withString:@""]
+             stringByReplacingOccurrencesOfString:@">" withString:@""]
+            stringByReplacingOccurrencesOfString:@" " withString:@""];
+}
+
+// 16进制转NSData
+- (NSData *)hzc_convertHexStrToData {
+    if (!self || [self length] == 0) {
+        return nil;
+    }
+    
+    NSMutableData *hexData = [[NSMutableData alloc] initWithCapacity:20];
+    NSRange range;
+    if ([self length] % 2 == 0) {
+        range = NSMakeRange(0, 2);
+    } else {
+        range = NSMakeRange(0, 1);
+    }
+    for (NSInteger i = range.location; i < [self length]; i += 2) {
+        unsigned int anInt;
+        NSString *hexCharStr = [self substringWithRange:range];
+        NSScanner *scanner = [[NSScanner alloc] initWithString:hexCharStr];
+        
+        [scanner scanHexInt:&anInt];
+        NSData *entity = [[NSData alloc] initWithBytes:&anInt length:1];
+        [hexData appendData:entity];
+        
+        range.location += range.length;
+        range.length = 2;
+    }
+    return hexData;
+}
+
+
+
 @end

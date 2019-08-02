@@ -12,6 +12,8 @@
 #import "testView.h"
 #import "HZCMenuLabel.h"
 
+#import <zlib.h>
+
 @interface ViewController ()<UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -27,12 +29,47 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    HZCMenuLabel *label = [[HZCMenuLabel alloc]initWithFrame:CGRectMake(100, 100, 200, 20)];
-    label.textColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
-    label.text = @"我是Label";
-    [self.view addSubview:label];
-    
+//    HZCMenuLabel *label = [[HZCMenuLabel alloc]initWithFrame:CGRectMake(100, 100, 200, 20)];
+//    label.textColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+//    label.text = @"我是Label";
+//    [self.view addSubview:label];
+    NSString *str = @"Aylsn";
+    NSString *hex = [str hzc_changeHexString];
 
+    NSData *data = [hex hzc_convertHexStrToData];
+    NSLog(@"%ld", data.length);
+    NSLog(@"%@", data);
+    
+    
+//    uLong crc = crc32(0L, Z_NULL, 0);
+//    crc = crc32(crc, data.bytes, (uint)data.length);
+//
+//    NSLog(@"%ld", crc);
+//
+//    NSString *temp = [NSString stringWithFormat:@"%lu", crc];
+//    long long num = temp.longLongValue;
+//    NSString *temp2 = [NSString stringWithFormat:@"%llx", num];
+//    NSLog(@"%@", [temp2 hzc_convertHexStrToData]);
+ 
+}
+
+
+// 转为本地大小端模式 返回Unsigned类型的数据
++ (unsigned int)unsignedDataTointWithData:(NSData *)data Location:(NSInteger)location Offset:(NSInteger)offset {
+    unsigned int value=0;
+    NSData *intdata= [data subdataWithRange:NSMakeRange(location, offset)];
+    
+    if (offset==2) {
+        value=CFSwapInt16BigToHost(*(int*)([intdata bytes]));
+    }
+    else if (offset==4) {
+        value = CFSwapInt32BigToHost(*(int*)([intdata bytes]));
+    }
+    else if (offset==1) {
+        unsigned char *bs = (unsigned char *)[[data subdataWithRange:NSMakeRange(location, 1) ] bytes];
+        value = *bs;
+    }
+    return value;
 }
 
 - (void)clickButton {

@@ -61,5 +61,19 @@
 
 /** 字符串转时间戳 如：2017-4-10 17:15:10 */
 - (NSString *)hzc_getTimeString;
+/** 转换为16进制字符串 */
+- (NSString *)hzc_changeHexString;
+/** 转换为16进制字符串 */
++ (NSString *)hzc_hexStringFromString:(NSString *)string;
+/** 16进制转字符串 */
+- (NSString *)hzc_hexStringChangeString;
+/** 16进制转字符串 */
++ (NSString *)hzc_stringFromHexString:(NSString *)hexString;
+/** data转换成16进制字符串 */
++ (NSString *)hzc_hexStringFormData:(NSData *)data;
+/**  16进制转NSData   */
+- (NSData *)hzc_convertHexStrToData;
+
+
 
 @end
