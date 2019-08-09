@@ -18,3 +18,4 @@
 #import "UITableView+HZCKit.h"
 #import "UISearchBar+HZCKit.h"
 #import "UIButton+HZCKit.h"
+#import "NSData+HZCKit.h"

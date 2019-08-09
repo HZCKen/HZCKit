@@ -31,6 +31,7 @@
 		18EAF76221CCE28A009660C1 /* UIView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF76121CCE28A009660C1 /* UIView+HZCKit.m */; };
 		18EAF76521CCE684009660C1 /* testView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF76421CCE684009660C1 /* testView.m */; };
 		18EAF76921CCEAA5009660C1 /* testView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EAF76821CCEAA5009660C1 /* testView.xib */; };
+		BEFDDAC522FDB1F4001A965D /* NSData+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFDDAC422FDB1F4001A965D /* NSData+HZCKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		18EAF76321CCE684009660C1 /* testView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testView.h; sourceTree = "<group>"; };
 		18EAF76421CCE684009660C1 /* testView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testView.m; sourceTree = "<group>"; };
 		18EAF76821CCEAA5009660C1 /* testView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testView.xib; sourceTree = "<group>"; };
+		BEFDDAC322FDB1F4001A965D /* NSData+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+HZCKit.h"; sourceTree = "<group>"; };
+		BEFDDAC422FDB1F4001A965D /* NSData+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+HZCKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +226,8 @@
 				188D442B2297A0C1001EFAAC /* HZCMenuLabel.m */,
 				181ABE4122CDA96500EA1B15 /* NSArray+HZCKit.h */,
 				181ABE4222CDA96500EA1B15 /* NSArray+HZCKit.m */,
+				BEFDDAC322FDB1F4001A965D /* NSData+HZCKit.h */,
+				BEFDDAC422FDB1F4001A965D /* NSData+HZCKit.m */,
 			);
 			path = HZCKit;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				181E8D59224C9BE8007DDDC5 /* UIButton+HZCKit.m in Sources */,
 				186DAACE211295DF004DCEFC /* main.m in Sources */,
 				186DAB032112990E004DCEFC /* UIColor+HZCKit.m in Sources */,
+				BEFDDAC522FDB1F4001A965D /* NSData+HZCKit.m in Sources */,
 				186DAAC0211295DA004DCEFC /* AppDelegate.m in Sources */,
 				186DAB042112990E004DCEFC /* NSString+HZCKit.m in Sources */,
 			);
