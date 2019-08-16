@@ -330,5 +330,39 @@
 }
 
 
+//传入 秒  得到  xx分钟xx秒
++ (NSString *)hzc_getMMSSFromSS:(NSInteger)seconds {
+    
+    //format of minute
+    NSString *minute = [NSString stringWithFormat:@"%ld",seconds/60];
+    //format of second
+    NSString *second = [NSString stringWithFormat:@"%ld",seconds%60];
+    //format of time
+    NSString *formatTime = [NSString stringWithFormat:@"%@分%@秒", minute, second];
+    if ([minute isEqualToString:@"0"]) {
+        formatTime = [NSString stringWithFormat:@"%@秒", second];
+    }
+    NSLog(@"formatTime : %@",formatTime);
+    
+    return formatTime;
+    
+}
+
+//传入 秒  得到 xx:xx:xx
++ (NSString *)hzc_getHHMMSSFromSS:(NSInteger)seconds {
+    
+    //format of hour
+    NSString *hour = [NSString stringWithFormat:@"%02ld",seconds/3600];
+    //format of minute
+    NSString *minute = [NSString stringWithFormat:@"%02ld",(seconds%3600)/60];
+    //format of second
+    NSString *second = [NSString stringWithFormat:@"%02ld",seconds%60];
+    //format of time
+    NSString *formatTime = [NSString stringWithFormat:@"%@:%@:%@", hour, minute, second];
+    
+    return formatTime;
+    
+}
+
 
 @end

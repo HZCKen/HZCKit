@@ -74,6 +74,10 @@
 /**  16进制转NSData   */
 - (NSData *)hzc_convertHexStrToData;
 
+///传入 秒  得到  xx分钟xx秒
++ (NSString *)hzc_getMMSSFromSS:(NSInteger)seconds;
 
+///传入 秒  得到 xx:xx:xx
++ (NSString *)hzc_getHHMMSSFromSS:(NSInteger)seconds;
 
 @end
