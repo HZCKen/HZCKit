@@ -295,10 +295,30 @@
 }
 
 + (NSString *)hzc_hexStringFormData:(NSData *)data {
-    return [[[[NSString stringWithFormat:@"%@",data]
-              stringByReplacingOccurrencesOfString:@"<" withString:@""]
-             stringByReplacingOccurrencesOfString:@">" withString:@""]
-            stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    if (!data || [data length] == 0) {
+        return @"";
+    }
+    NSMutableString *string = [[NSMutableString alloc] initWithCapacity:[data length]];
+    
+    [data enumerateByteRangesUsingBlock:^(const void *bytes, NSRange byteRange, BOOL *stop) {
+        unsigned char *dataBytes = (unsigned char*)bytes;
+        for (NSInteger i = 0; i < byteRange.length; i++) {
+            NSString *hexStr = [NSString stringWithFormat:@"%x", (dataBytes[i]) & 0xff];
+            if ([hexStr length] == 2) {
+                [string appendString:hexStr];
+            } else {
+                [string appendFormat:@"0%@", hexStr];
+            }
+        }
+    }];
+    return string;
+    
+    ///iOS 13 有bug
+//    return [[[[NSString stringWithFormat:@"%@",data]
+//              stringByReplacingOccurrencesOfString:@"<" withString:@""]
+//             stringByReplacingOccurrencesOfString:@">" withString:@""]
+//            stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
 
 // 16进制转NSData
