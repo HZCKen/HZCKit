@@ -13,6 +13,8 @@
 + (UIImage *)hzc_getImageWithColor:(UIColor*)color height:(CGFloat)height;
 /** 获取没有被渲染的原图 */
 + (UIImage *)hzc_imageAlwaysOriginalNamed:(NSString *)imageName;
+/** 绘制方位圆角 */
+- (UIImage *)hzc_drawCornerInRect:(CGRect)rect Corners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius;
 /** 绘制图片圆角 */
 - (UIImage *)hzc_drawCornerInRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius;
 /** 绘制圆 */

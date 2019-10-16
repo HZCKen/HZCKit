@@ -33,6 +33,21 @@
     return [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
 
+/**  绘制方位圆角 */
+- (UIImage *)hzc_drawCornerInRect:(CGRect)rect Corners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius {
+    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:corners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+    UIGraphicsBeginImageContextWithOptions(rect.size, false, [UIScreen mainScreen].scale);
+    CGContextAddPath(UIGraphicsGetCurrentContext(), bezierPath.CGPath);
+    CGContextClip(UIGraphicsGetCurrentContext());
+    [self drawInRect:rect];
+    
+    CGContextDrawPath(UIGraphicsGetCurrentContext(), kCGPathFillStroke);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 /** 绘制图片圆角 */
 - (UIImage *)hzc_drawCornerInRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius {
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];

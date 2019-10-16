@@ -30,18 +30,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSString *dataString = @"34FF6E0641523731235514570733F04AEE270004";
+//    NSString *dataString = @"34FF6E0641523731235514570733F04AEE270004";
+//
+//
+//
+//    NSData *data = [dataString hzc_convertHexStrToData];
+//
+//    unsigned char *bytes = (uint8_t *)[data bytes];
+//
+//    uint32_t result = L_Checkout_Crc32(bytes, data.length);
+//
+//    NSLog(@"%@", [NSData hzc_bytesFromUInt32:hzc_Tranverse32(result)]);
 
-
-
-    NSData *data = [dataString hzc_convertHexStrToData];
-
-    unsigned char *bytes = (uint8_t *)[data bytes];
-
-    uint32_t result = L_Checkout_Crc32(bytes, data.length);
-
-    NSLog(@"%@", [NSData hzc_bytesFromUInt32:hzc_Tranverse32(result)]);
-
+    self.button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    [self.view addSubview:self.button];
+    
+    [self.button setBackgroundImage:[[UIImage hzc_getImageWithColor:[UIColor purpleColor] height:100] hzc_drawCornerInRect:self.button.bounds Corners:(UIRectCornerTopRight) cornerRadius:10] forState:(UIControlStateNormal)];
+    
 }
 
 
