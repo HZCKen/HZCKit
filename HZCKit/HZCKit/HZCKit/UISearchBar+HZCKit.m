@@ -39,12 +39,14 @@
 
 - (void)hzc_setCancelButtonTitle:(NSString *)title {
 //    [UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]].title = title;
-    for (UIView *view in self.subviews.lastObject.subviews) {
-        if ([view isKindOfClass:NSClassFromString(@"UINavigationButton")]) {
-            UIButton *cancel = (UIButton *)view;
-            [cancel setTitle:title forState:UIControlStateNormal];
-        }
-    }
+//    for (UIView *view in self.subviews.lastObject.subviews) {
+//        if ([view isKindOfClass:NSClassFromString(@"UINavigationButton")]) {
+//            UIButton *cancel = (UIButton *)view;
+//            [cancel setTitle:title forState:UIControlStateNormal];
+//        }
+//    }
+    UIButton *cancelButton = [self hzc_getCancelButton];
+    [cancelButton setTitle:title forState:(UIControlStateNormal)];
 }
 
 - (void)hzc_setCancelButtonFont:(UIFont *)font {
@@ -53,12 +55,33 @@
 }
 
 - (UIButton *)hzc_getCancelButton {
-    for (UIView *view in self.subviews.lastObject.subviews) {
-        if ([view isKindOfClass:NSClassFromString(@"UINavigationButton")]) {
-            UIButton *cancel = (UIButton *)view;
-            return cancel;
+//    for (UIView *view in self.subviews.lastObject.subviews) {
+//        if ([view isKindOfClass:NSClassFromString(@"UINavigationButton")]) {
+//            UIButton *cancel = (UIButton *)view;
+//            return cancel;
+//        }
+//    }
+//    return nil;
+    UIButton *cancelButton = (UIButton *)[self hzc_findViewWithClassName:NSStringFromClass([UIButton class]) inView:self];
+    return cancelButton;
+}
+
+// 遍历获取指定类型的属性
+- (UIView *)hzc_findViewWithClassName:(NSString *)className inView:(UIView *)view{
+    Class specificView = NSClassFromString(className);
+    if ([view isKindOfClass:specificView]) {
+        return view;
+    }
+
+    if (view.subviews.count > 0) {
+        for (UIView *subView in view.subviews) {
+            UIView *targetView = [self hzc_findViewWithClassName:className inView:subView];
+            if (targetView != nil) {
+                return targetView;
+            }
         }
     }
+    
     return nil;
 }
 

@@ -47,6 +47,8 @@
     
     [self.button setBackgroundImage:[[UIImage hzc_getImageWithColor:[UIColor purpleColor] height:100] hzc_drawCornerInRect:self.button.bounds Corners:(UIRectCornerTopRight) cornerRadius:10] forState:(UIControlStateNormal)];
     
+//    [self.navigationController.navigationBar hzc_setStatusBarBackgroundColor: [UIColor redColor]];
+    [self.navigationController.navigationBar hzc_navBarBackGroundColor:[UIColor brownColor] image:nil isOpaque:YES];
 }
 
 
