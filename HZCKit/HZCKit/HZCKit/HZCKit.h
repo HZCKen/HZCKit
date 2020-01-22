@@ -20,3 +20,10 @@
 #import "UIButton+HZCKit.h"
 #import "NSData+HZCKit.h"
 #import "UINavigationBar+HZCKit.h"
+
+#define IPHONE_X \
+({BOOL isIphoneX = NO; \
+if ([UIDevice currentDevice].systemVersion.floatValue >= 11.0) {\
+  isIphoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isIphoneX);})
