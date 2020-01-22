@@ -49,6 +49,15 @@
     
 //    [self.navigationController.navigationBar hzc_setStatusBarBackgroundColor: [UIColor redColor]];
     [self.navigationController.navigationBar hzc_navBarBackGroundColor:[UIColor brownColor] image:nil isOpaque:YES];
+    
+    
+    
+    UIView *view1 = [[UIView alloc]initWithFrame:CGRectMake(100, 200, 100, 200)];
+    [self.view addSubview:view1];
+    view1.backgroundColor = [UIColor redColor];
+//    [view1 hzc_addRounderCornerWithRadius:25 backgroundColor:[UIColor blueColor]];
+    [view1 hzc_addCircleBackgroundColor:[UIColor yellowColor]];
+    
 }
 
 
