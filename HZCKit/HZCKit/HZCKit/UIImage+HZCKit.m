@@ -10,9 +10,23 @@
 
 @implementation UIImage (HZCKit)
 
-/** 根据颜色和高度获取图片 */
-+ (UIImage *)hzc_getImageWithColor:(UIColor*)color height:(CGFloat)height {
-    CGRect r= CGRectMake(0.0f, 0.0f, 1.0f, height);
+/** 根据颜色获取1*1图片 */
++ (UIImage *)hzc_getImageWithColor:(UIColor*)color  {
+    CGRect r= CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(r.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, r);
+    
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return img;
+}
+
++ (UIImage *)hzc_getImageWithColor:(UIColor*)color  size:(CGSize)size {
+    CGRect r= CGRectMake(0.0f, 0.0f, size.width, size.height);
     UIGraphicsBeginImageContext(r.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -34,7 +48,7 @@
 }
 
 /**  绘制方位圆角 */
-- (UIImage *)hzc_drawCornerInRect:(CGRect)rect Corners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius {
+- (UIImage *)hzc_drawCornerInRect:(CGRect)rect corners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius {
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:corners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
     UIGraphicsBeginImageContextWithOptions(rect.size, false, [UIScreen mainScreen].scale);
     CGContextAddPath(UIGraphicsGetCurrentContext(), bezierPath.CGPath);

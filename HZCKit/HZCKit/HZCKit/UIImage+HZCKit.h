@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (HZCKit)
-/** 根据颜色和高度获取图片 */
-+ (UIImage *)hzc_getImageWithColor:(UIColor*)color height:(CGFloat)height;
+/** 根据颜色获取1*1矩形图片 */
++ (UIImage *)hzc_getImageWithColor:(UIColor*)color;
+/** 根据颜色和大小获取图片 */
++ (UIImage *)hzc_getImageWithColor:(UIColor*)color size:(CGSize)size;
 /** 获取没有被渲染的原图 */
 + (UIImage *)hzc_imageAlwaysOriginalNamed:(NSString *)imageName;
 /** 绘制方位圆角 */
-- (UIImage *)hzc_drawCornerInRect:(CGRect)rect Corners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius;
+- (UIImage *)hzc_drawCornerInRect:(CGRect)rect corners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius;
 /** 绘制图片圆角 */
 - (UIImage *)hzc_drawCornerInRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius;
 /** 绘制圆 */

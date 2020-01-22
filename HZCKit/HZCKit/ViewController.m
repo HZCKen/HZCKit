@@ -45,7 +45,7 @@
     self.button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     [self.view addSubview:self.button];
     
-    [self.button setBackgroundImage:[[UIImage hzc_getImageWithColor:[UIColor purpleColor] height:100] hzc_drawCornerInRect:self.button.bounds Corners:(UIRectCornerTopRight) cornerRadius:10] forState:(UIControlStateNormal)];
+    [self.button setBackgroundImage:[[UIImage hzc_getImageWithColor:[UIColor purpleColor]] hzc_drawCornerInRect:self.button.bounds corners:(UIRectCornerTopRight | UIRectCornerBottomLeft) cornerRadius:10] forState:(UIControlStateNormal)];
     
 //    [self.navigationController.navigationBar hzc_setStatusBarBackgroundColor: [UIColor redColor]];
     [self.navigationController.navigationBar hzc_navBarBackGroundColor:[UIColor brownColor] image:nil isOpaque:YES];
