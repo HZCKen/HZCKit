@@ -16,11 +16,11 @@
 /** 获取没有被渲染的原图 */
 + (UIImage *)hzc_imageAlwaysOriginalNamed:(NSString *)imageName;
 /** 绘制方位圆角 */
-- (UIImage *)hzc_drawCornerInRect:(CGRect)rect corners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius;
+- (UIImage *)hzc_drawCornerInRect:(CGSize)size corners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius;
 /** 绘制图片圆角 */
-- (UIImage *)hzc_drawCornerInRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius;
+- (UIImage *)hzc_drawCornerInRect:(CGSize)size cornerRadius:(CGFloat)cornerRadius;
 /** 绘制圆 */
-- (UIImage *)hzc_drawCircleInRect:(CGRect)rect;
+- (UIImage *)hzc_drawCircleInRect:(CGSize)size;
 /** 压缩图片 */
 - (UIImage *)hzc_thumImage:(CGSize)size;
 /** 异步解码图片 */

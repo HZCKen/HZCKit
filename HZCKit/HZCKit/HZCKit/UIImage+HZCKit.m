@@ -48,7 +48,8 @@
 }
 
 /**  绘制方位圆角 */
-- (UIImage *)hzc_drawCornerInRect:(CGRect)rect corners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius {
+- (UIImage *)hzc_drawCornerInRect:(CGSize)size corners:(UIRectCorner)corners cornerRadius:(CGFloat)cornerRadius {
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:corners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
     UIGraphicsBeginImageContextWithOptions(rect.size, false, [UIScreen mainScreen].scale);
     CGContextAddPath(UIGraphicsGetCurrentContext(), bezierPath.CGPath);
@@ -63,7 +64,8 @@
 }
 
 /** 绘制图片圆角 */
-- (UIImage *)hzc_drawCornerInRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius {
+- (UIImage *)hzc_drawCornerInRect:(CGSize)size cornerRadius:(CGFloat)cornerRadius {
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
     UIGraphicsBeginImageContextWithOptions(rect.size, false, [UIScreen mainScreen].scale);
     CGContextAddPath(UIGraphicsGetCurrentContext(), bezierPath.CGPath);
@@ -78,7 +80,8 @@
 }
 
 /** 绘制圆 */
-- (UIImage *)hzc_drawCircleInRect:(CGRect)rect {
+- (UIImage *)hzc_drawCircleInRect:(CGSize)size {
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:rect.size.width/2];
     UIGraphicsBeginImageContextWithOptions(rect.size, false, [UIScreen mainScreen].scale);
     CGContextAddPath(UIGraphicsGetCurrentContext(), bezierPath.CGPath);

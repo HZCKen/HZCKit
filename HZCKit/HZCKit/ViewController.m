@@ -42,24 +42,40 @@
 //
 //    NSLog(@"%@", [NSData hzc_bytesFromUInt32:hzc_Tranverse32(result)]);
 
-    self.button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
-    [self.view addSubview:self.button];
+//    self.button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+//    [self.view addSubview:self.button];
+//
+//    [self.button setBackgroundImage:[[UIImage hzc_getImageWithColor:[UIColor purpleColor]] hzc_drawCornerInRect:self.button.bounds corners:(UIRectCornerTopRight | UIRectCornerBottomLeft) cornerRadius:10] forState:(UIControlStateNormal)];
+//
+////    [self.navigationController.navigationBar hzc_setStatusBarBackgroundColor: [UIColor redColor]];
+//    [self.navigationController.navigationBar hzc_navBarBackGroundColor:[UIColor brownColor] image:nil isOpaque:YES];
+//
+//
+//
+//    UIView *view1 = [[UIView alloc]initWithFrame:CGRectMake(100, 200, 100, 200)];
+//    [self.view addSubview:view1];
+//    view1.backgroundColor = [UIColor redColor];
+////    [view1 hzc_addRounderCornerWithRadius:25 backgroundColor:[UIColor blueColor]];
+//    [view1 hzc_addCircleBackgroundColor:[UIColor yellowColor]];
+//    NSLog(@"%@", NSStringFromCGRect(self.imageView.frame));
+//    UIImage *iamge = [[UIImage imageNamed:@"search"] hzc_drawCircleInRect:self.imageView.frame];
+////    UIImage *iamge = [UIImage imageNamed:@"search"];
+////    [self.imageView hzc_addRounderCornerWithRadius:5];
+//    self.imageView.image = iamge;
     
-    [self.button setBackgroundImage:[[UIImage hzc_getImageWithColor:[UIColor purpleColor]] hzc_drawCornerInRect:self.button.bounds corners:(UIRectCornerTopRight | UIRectCornerBottomLeft) cornerRadius:10] forState:(UIControlStateNormal)];
+    UIImage *iamge = [UIImage imageNamed:@"发现首页1_spec"] ;
+    //    UIImage *iamge = [UIImage imageNamed:@"search"];
+    //    [self.imageView hzc_addRounderCornerWithRadius:5];
+        self.imageView.image = iamge;
+//    [self.imageView hzc_addRounderCornerWithRadius:5];
     
-//    [self.navigationController.navigationBar hzc_setStatusBarBackgroundColor: [UIColor redColor]];
-    [self.navigationController.navigationBar hzc_navBarBackGroundColor:[UIColor brownColor] image:nil isOpaque:YES];
-    
-    
-    
-    UIView *view1 = [[UIView alloc]initWithFrame:CGRectMake(100, 200, 100, 200)];
-    [self.view addSubview:view1];
-    view1.backgroundColor = [UIColor redColor];
-//    [view1 hzc_addRounderCornerWithRadius:25 backgroundColor:[UIColor blueColor]];
-    [view1 hzc_addCircleBackgroundColor:[UIColor yellowColor]];
-    
+    [self.imageView hzc_addCircle];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+}
 
 //CRC32校验表
 uint32_t Crc32Table[] =

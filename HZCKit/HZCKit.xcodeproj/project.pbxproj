@@ -32,6 +32,7 @@
 		18EAF76221CCE28A009660C1 /* UIView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF76121CCE28A009660C1 /* UIView+HZCKit.m */; };
 		18EAF76521CCE684009660C1 /* testView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF76421CCE684009660C1 /* testView.m */; };
 		18EAF76921CCEAA5009660C1 /* testView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EAF76821CCEAA5009660C1 /* testView.xib */; };
+		BE1D1FDE23E3E52300334C33 /* UIImageView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D1FDD23E3E52300334C33 /* UIImageView+HZCKit.m */; };
 		BEFDDAC522FDB1F4001A965D /* NSData+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFDDAC422FDB1F4001A965D /* NSData+HZCKit.m */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,8 @@
 		18EAF76321CCE684009660C1 /* testView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testView.h; sourceTree = "<group>"; };
 		18EAF76421CCE684009660C1 /* testView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testView.m; sourceTree = "<group>"; };
 		18EAF76821CCEAA5009660C1 /* testView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testView.xib; sourceTree = "<group>"; };
+		BE1D1FDC23E3E52300334C33 /* UIImageView+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HZCKit.h"; sourceTree = "<group>"; };
+		BE1D1FDD23E3E52300334C33 /* UIImageView+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HZCKit.m"; sourceTree = "<group>"; };
 		BEFDDAC322FDB1F4001A965D /* NSData+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+HZCKit.h"; sourceTree = "<group>"; };
 		BEFDDAC422FDB1F4001A965D /* NSData+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+HZCKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +236,8 @@
 				BEFDDAC422FDB1F4001A965D /* NSData+HZCKit.m */,
 				18DF186E23D825DC00A925E4 /* UINavigationBar+HZCKit.h */,
 				18DF186F23D825DC00A925E4 /* UINavigationBar+HZCKit.m */,
+				BE1D1FDC23E3E52300334C33 /* UIImageView+HZCKit.h */,
+				BE1D1FDD23E3E52300334C33 /* UIImageView+HZCKit.m */,
 			);
 			path = HZCKit;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				18953ECA223902AE001308FC /* UISearchBar+HZCKit.m in Sources */,
 				18953EC72238FCA7001308FC /* UITableView+HZCKit.m in Sources */,
 				18EAF76521CCE684009660C1 /* testView.m in Sources */,
+				BE1D1FDE23E3E52300334C33 /* UIImageView+HZCKit.m in Sources */,
 				188D442C2297A0C1001EFAAC /* HZCMenuLabel.m in Sources */,
 				1878F83F211C17A100B423F9 /* NSObject+HZCKit.m in Sources */,
 				186DAB022112990E004DCEFC /* NSMutableAttributedString+HZCKit.m in Sources */,

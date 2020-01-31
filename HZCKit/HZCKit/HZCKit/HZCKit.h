@@ -20,6 +20,7 @@
 #import "UIButton+HZCKit.h"
 #import "NSData+HZCKit.h"
 #import "UINavigationBar+HZCKit.h"
+#import "UIImageView+HZCKit.h"
 
 #define IPHONE_X \
 ({BOOL isIphoneX = NO; \
