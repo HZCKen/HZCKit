@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "HZCKit.h"
 
+
+#import "ViewController1.h"
+#import "ViewController2.h"
 @interface AppDelegate ()
 
 @end
@@ -18,6 +21,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UITabBarController *tabbar = [[UITabBarController alloc] init];
+    
+    ViewController1 *vc1 = [[ViewController1 alloc] init];
+    vc1.tabBarItem.title = @"1";
+    
+    ViewController2 *vc2 = [[ViewController2 alloc] init];
+    vc2.tabBarItem.title = @"2";
+    
+    [tabbar addChildViewController:[[UINavigationController alloc] initWithRootViewController:vc1]];
+    [tabbar addChildViewController:[[UINavigationController alloc] initWithRootViewController:vc2]];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = tabbar;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
