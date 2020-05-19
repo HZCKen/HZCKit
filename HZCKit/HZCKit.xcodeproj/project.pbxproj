@@ -10,6 +10,7 @@
 		181ABE4322CDA96500EA1B15 /* NSArray+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ABE4222CDA96500EA1B15 /* NSArray+HZCKit.m */; };
 		181E8D59224C9BE8007DDDC5 /* UIButton+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 181E8D58224C9BE8007DDDC5 /* UIButton+HZCKit.m */; };
 		1821079B22E83FAF0066CD5F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1821079A22E83FAE0066CD5F /* libz.tbd */; };
+		185549152473DAB9008904E8 /* UITableViewCell+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 185549142473DAB9008904E8 /* UITableViewCell+HZCKit.m */; };
 		186DAAC0211295DA004DCEFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAABF211295DA004DCEFC /* AppDelegate.m */; };
 		186DAAC3211295DA004DCEFC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAC2211295DA004DCEFC /* ViewController.m */; };
 		186DAAC6211295DA004DCEFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186DAAC4211295DA004DCEFC /* Main.storyboard */; };
@@ -64,6 +65,8 @@
 		181E8D57224C9BE8007DDDC5 /* UIButton+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+HZCKit.h"; sourceTree = "<group>"; };
 		181E8D58224C9BE8007DDDC5 /* UIButton+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+HZCKit.m"; sourceTree = "<group>"; };
 		1821079A22E83FAE0066CD5F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		185549132473DAB9008904E8 /* UITableViewCell+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+HZCKit.h"; sourceTree = "<group>"; };
+		185549142473DAB9008904E8 /* UITableViewCell+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+HZCKit.m"; sourceTree = "<group>"; };
 		186DAABB211295DA004DCEFC /* HZCKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZCKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186DAABE211295DA004DCEFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		186DAABF211295DA004DCEFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -261,6 +264,8 @@
 				BE1D1FDD23E3E52300334C33 /* UIImageView+HZCKit.m */,
 				BE31AD89246F6E690095E3E6 /* HZCBaseViewController.h */,
 				BE31AD8A246F6E690095E3E6 /* HZCBaseViewController.m */,
+				185549132473DAB9008904E8 /* UITableViewCell+HZCKit.h */,
+				185549142473DAB9008904E8 /* UITableViewCell+HZCKit.m */,
 			);
 			path = HZCKit;
 			sourceTree = "<group>";
@@ -328,7 +333,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "AiChen smart Windows and doors technology co., LTD";
+				ORGANIZATIONNAME = Ken;
 				TargetAttributes = {
 					186DAABA211295DA004DCEFC = {
 						CreatedOnToolsVersion = 9.3;
@@ -417,6 +422,7 @@
 				186DAACE211295DF004DCEFC /* main.m in Sources */,
 				186DAB032112990E004DCEFC /* UIColor+HZCKit.m in Sources */,
 				BE31AD8E246F6F920095E3E6 /* ViewController1.m in Sources */,
+				185549152473DAB9008904E8 /* UITableViewCell+HZCKit.m in Sources */,
 				BEFDDAC522FDB1F4001A965D /* NSData+HZCKit.m in Sources */,
 				186DAAC0211295DA004DCEFC /* AppDelegate.m in Sources */,
 				BE31AD91246F6FA40095E3E6 /* ViewController2.m in Sources */,
