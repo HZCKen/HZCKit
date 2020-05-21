@@ -12,7 +12,7 @@
 @implementation UITableViewCell (HZCKit)
 - (void)hzc_cornerCard:(CGFloat)radio tableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
     UIRectCorner corner = [self hzc_checkCellIndexPath:indexPath tableView:tableView];
-    CGRect contentBounds = CGRectMake(0, 0, self.contentView.frame.size.width, self.contentView.frame.size.height);
+    CGRect contentBounds = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     CAShapeLayer *layer = [[CAShapeLayer alloc] init];
     layer.bounds = contentBounds;
     layer.position = CGPointMake(CGRectGetMidX(contentBounds), CGRectGetMidY(contentBounds));
