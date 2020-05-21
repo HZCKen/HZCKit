@@ -22,8 +22,10 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton *button = [UIButton buttonWithType:(UIButtonTypeContactAdd)];
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     button.frame = CGRectMake(59, 64, 100, 100);
+    [button setBackgroundColor:[UIColor blueColor]];
+    [button hzc_shadowPathWithColor:[UIColor redColor] shadowOpacity:1 shadowRadius:10 shadowPathType:kShadowPathAround shadowPathWidth:10];
     [self.view addSubview:button];
     [button addTarget:self action:@selector(clickButton) forControlEvents:(UIControlEventTouchUpInside)];
 
