@@ -37,6 +37,38 @@
     [self hzc_addRounderCornerWithRadius:(self.bounds.size.width / 2) backgroundColor:color];
 }
 
+- (void)hzc_shadowPathWithColor:(UIColor *)shadowColor shadowOpacity:(CGFloat)shadowOpacity shadowRadius:(CGFloat)shadowRadius shadowOffset:(CGSize)shadowOffset shadowPathType:(HZCShadowPathType)shadowPathType shadowPathWidth:(CGFloat)shadowPathWidth {
+    self.layer.masksToBounds = NO;//必须要等于NO否则会把阴影切割隐藏掉
+    self.layer.shadowColor = shadowColor.CGColor;// 阴影颜色
+    self.layer.shadowOpacity = shadowOpacity;// 阴影透明度
+    self.layer.shadowOffset = shadowOffset;//shadowOffset阴影偏移,这个跟shadowRadius配合使用
+    self.layer.shadowRadius = shadowRadius;//阴影半径
+    CGRect shadowRect = CGRectZero;
+    CGFloat originX,originY,sizeWith,sizeHeight;
+    originX = 0;
+    originY = 0;
+    sizeWith = self.bounds.size.width;
+    sizeHeight = self.bounds.size.height;
+    
+    if (shadowPathType == kShadowPathTop) {
+        shadowRect = CGRectMake(originX, originY-shadowPathWidth/2, sizeWith, shadowPathWidth);
+    } else if (shadowPathType == kShadowPathBottom){
+        shadowRect = CGRectMake(originY, sizeHeight-shadowPathWidth/2, sizeWith, shadowPathWidth);
+    } else if (shadowPathType == kShadowPathLeft){
+        shadowRect = CGRectMake(originX-shadowPathWidth/2, originY, shadowPathWidth, sizeHeight);
+    } else if (shadowPathType == kShadowPathRight){
+        shadowRect = CGRectMake(sizeWith-shadowPathWidth/2, originY, shadowPathWidth, sizeHeight);
+    } else if (shadowPathType == kShadowPathAround){
+        shadowRect = CGRectMake(originX-shadowPathWidth/2, originY-shadowPathWidth/2, sizeWith+shadowPathWidth, sizeHeight+shadowPathWidth);
+    }
+    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRect:shadowRect];
+    self.layer.shadowPath = bezierPath.CGPath;//阴影路径
+}
+
+- (void)hzc_shadowPathWithColor:(UIColor *)shadowColor shadowOpacity:(CGFloat)shadowOpacity shadowRadius:(CGFloat)shadowRadius shadowPathType:(HZCShadowPathType)shadowPathType shadowPathWidth:(CGFloat)shadowPathWidth {
+    [self hzc_shadowPathWithColor:shadowColor shadowOpacity:shadowOpacity shadowRadius:shadowRadius shadowOffset:CGSizeZero shadowPathType:shadowPathType shadowPathWidth:shadowPathWidth];
+}
+
 - (UIImage *)hzc_getScreenshot {
     UIGraphicsBeginImageContext(CGSizeMake(self.frame.size.width, self.frame.size.height));
     CGContextRef context = UIGraphicsGetCurrentContext();
