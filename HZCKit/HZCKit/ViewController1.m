@@ -10,9 +10,16 @@
 #import "ViewController3.h"
 #import "ViewController2.h"
 #import "HZCKit.h"
+
+#import "CustomSwitchView.h"
+
+#import "AYSIotSliderView.h"
+#import "Masonry.h"
 @interface ViewController1 ()
 /** <#Description#> */
 @property (nonatomic, strong) UIView *bcView;
+/** <#Description#> */
+@property (nonatomic, strong) AYSIotSliderView *sliderView;
 @end
 
 @implementation ViewController1
@@ -22,18 +29,64 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    button.frame = CGRectMake(59, 64, 100, 100);
-    [button setBackgroundColor:[UIColor blueColor]];
-    [button hzc_shadowPathWithColor:[UIColor redColor] shadowOpacity:1 shadowRadius:10 shadowPathType:kShadowPathAround shadowPathWidth:10];
-    [self.view addSubview:button];
-    [button addTarget:self action:@selector(clickButton) forControlEvents:(UIControlEventTouchUpInside)];
+//    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+//    button.frame = CGRectMake(59, 64, 100, 100);
+//    [button setBackgroundColor:[UIColor blueColor]];
+//    button.layer.cornerRadius = 10;
+//    [button hzc_shadowPathWithColor:[UIColor redColor] shadowOpacity:1 shadowRadius:10 shadowPathType:kShadowPathAround shadowPathWidth:10];
+//    [self.view addSubview:button];
+//    [button addTarget:self action:@selector(clickButton) forControlEvents:(UIControlEventTouchUpInside)];
+//
+//    UIView *bcView = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
+//    [self.view addSubview:bcView];
+//    self.bcView = bcView;
+//    bcView.backgroundColor = [UIColor brownColor];
+//    [self.bcView hzc_shadowPathWithColor:[UIColor greenColor] shadowOpacity:1 shadowRadius:10 shadowPathType:kShadowPathAround shadowPathWidth:10];
+//    
+//    UILabel *label = [[UILabel alloc] init];
+//    [self.view addSubview:label];
 
-    UIView *bcView = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
-    [self.view addSubview:bcView];
-    self.bcView = bcView;
-    bcView.backgroundColor = [UIColor brownColor];
-    [self.bcView hzc_shadowPathWithColor:[UIColor greenColor] shadowOpacity:1 shadowRadius:10 shadowPathType:kShadowPathAround shadowPathWidth:10];
+//    CustomSwitchView *switchView = [[CustomSwitchView alloc] init];
+////    switchView.frame = CGRectMake(197.7,300,47,22);
+////    switchView.layer.cornerRadius = 7.3;
+//    [self.view addSubview:switchView];
+//
+//
+//    [switchView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.width.mas_equalTo(47);
+//        make.height.mas_equalTo(22);
+//        make.centerX.equalTo(self.view.mas_centerX);
+//        make.centerY.equalTo(self.view.mas_centerY);
+//    }];
+//
+//    [switchView setSwitchVauleChange:^(BOOL isOn) {
+//        NSLog(@"%d", isOn);
+//    }];
+//
+    
+    AYSIotSliderView *sliderView = [[AYSIotSliderView alloc] init];
+    sliderView.backgroundColor = [UIColor lightGrayColor];
+    sliderView.progressColor = [UIColor colorWithRed:44/255.0 green:99/255.0 blue:216/255.0 alpha:1.0];
+    sliderView.layer.cornerRadius = 12;
+    
+    [self.view addSubview:sliderView];
+    
+    [sliderView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.view.mas_centerY);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.width.mas_equalTo(60);
+        make.height.mas_equalTo(160);
+    }];
+    
+    sliderView.currentPercent = 0.2;
+    self.sliderView = sliderView;
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.sliderView.currentPercent = 0.9;
+    
 }
 
 int count = 1;
