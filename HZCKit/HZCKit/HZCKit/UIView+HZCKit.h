@@ -29,6 +29,9 @@ typedef NS_ENUM(NSInteger , HZCShadowPathType) {
 
 - (void)hzc_shadowPathWithColor:(UIColor *)shadowColor shadowOpacity:(CGFloat)shadowOpacity shadowRadius:(CGFloat)shadowRadius shadowPathType:(HZCShadowPathType)shadowPathType shadowPathWidth:(CGFloat)shadowPathWidth;
 
+/** 设置方位圆角 */
+- (void)hzc_bezierPathWithRoundedRect:(UIRectCorner)corner cornerRadii:(CGSize)cornerRadii;
+
 - (void)hzc_shadowPathWithColor:(UIColor *)shadowColor shadowOpacity:(CGFloat)shadowOpacity shadowRadius:(CGFloat)shadowRadius shadowOffset:(CGSize)shadowOffset shadowPathType:(HZCShadowPathType)shadowPathType shadowPathWidth:(CGFloat)shadowPathWidth;
 
 - (UIImage *)hzc_getScreenshot;

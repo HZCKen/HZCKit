@@ -7,6 +7,7 @@
 //
 
 #import "AYSIotSliderView.h"
+#import "UIView+HZCKit.h"
 
 @interface AYSIotSliderView ()
 
@@ -43,8 +44,10 @@
 
 
 - (void)setupUI {
-    [self addSubview:self.thumbView];
     [self addSubview:self.progressView];
+    [self addSubview:self.thumbView];
+    UIPanGestureRecognizer *gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureAction:)];
+    [self.thumbView addGestureRecognizer:gesture];
 }
 
 - (void)layoutSubviews {
@@ -52,11 +55,72 @@
     
     CGFloat width = self.bounds.size.width;
     CGFloat height = self.bounds.size.height;
-    
     CGFloat thumbY = height - self.thumbWidth;
     
     self.thumbView.frame = CGRectMake(width / 2 - (self.thumbWidth / 2), thumbY, self.thumbWidth, self.thumbWidth);
+
     NSLog(@"%s", __FUNCTION__);
+    NSLog(@"%f", _currentPercent);
+    CGFloat  centerY = (self.frame.size.height - self.thumbWidth) * _currentPercent + self.thumbWidth / 2;
+    
+    self.thumbView.center = CGPointMake(self.thumbView.center.x, centerY);
+    if (_currentPercent == 1) {
+        self.progressView.frame = CGRectMake(0, 0, width, height);
+        [self.progressView hzc_bezierPathWithRoundedRect:(UIRectCornerAllCorners) cornerRadii:CGSizeMake(12, 12)];
+    } else {
+        self.progressView.frame = CGRectMake(0, 0, width, centerY);
+        [self.progressView hzc_bezierPathWithRoundedRect:UIRectCornerTopRight | UIRectCornerTopLeft cornerRadii:CGSizeMake(12, 12)];
+    }
+    
+}
+
+- (void)panGestureAction:(UIPanGestureRecognizer *)gesture {
+    
+    
+    switch (gesture.state) {
+        case UIGestureRecognizerStateBegan:
+            if (self.beginDrag) {
+                self.beginDrag();
+            }
+            break;
+            
+        case UIGestureRecognizerStateChanged:{
+            CGFloat height = self.bounds.size.height;
+//            滑块最大最小的区域
+            CGFloat minThumbArea = self.thumbWidth/2;
+            CGFloat maxThumbArea = height - self.thumbWidth / 2;
+            
+            CGPoint point = [gesture locationInView:self];
+            CGFloat movePosition = 0;
+            CGFloat percent = 0 ;
+            
+            movePosition = MAX(minThumbArea, point.y);
+            movePosition = MIN(maxThumbArea, movePosition);
+            
+            percent = (movePosition- self.thumbWidth/2)/(self.frame.size.height - self.thumbWidth) ;
+            
+            self.currentPercent = percent;
+            
+            if (self.changeDrag) {
+                self.changeDrag(self.currentPercent);
+            }
+            
+        }
+        break;
+            
+        case UIGestureRecognizerStateEnded:
+            
+            if (self.endDrag) {
+                self.endDrag(self.currentPercent);
+            }
+            
+            break;
+        default:
+            break;
+    }
+    
+    
+    
 }
 
 - (void)setProgressColor:(UIColor *)progressColor {
@@ -70,20 +134,9 @@
     CGFloat maXPercent = 1;
     _currentPercent = MAX(minPercent, _currentPercent);
     _currentPercent = MIN(maXPercent, _currentPercent);
-    
-//    [self layoutSubviews];
-    
-    
-    CGFloat  centerY = (self.frame.size.height ) * _currentPercent - self.thumbWidth;
 
-    
-    
+    [self setNeedsLayout];
 
-   self.thumbView.center = CGPointMake(self.thumbView.center.x, centerY);
-    NSLog(@"%s", __FUNCTION__);
-    
-    NSLog(@"%@", NSStringFromCGPoint(self.thumbView.center));
-    
 }
 
 - (UIView *)thumbView {

@@ -75,17 +75,29 @@
         make.centerY.equalTo(self.view.mas_centerY);
         make.centerX.equalTo(self.view.mas_centerX);
         make.width.mas_equalTo(60);
-        make.height.mas_equalTo(160);
+        make.height.mas_equalTo(200);
     }];
     
     sliderView.currentPercent = 0.2;
     self.sliderView = sliderView;
     
+    [sliderView setBeginDrag:^{
+       NSLog(@"%s", __FUNCTION__);
+    }];
+    
+    [sliderView setChangeDrag:^(CGFloat percent) {
+        NSLog(@"chang %lf", percent);
+    }];
+    
+    [sliderView setEndDrag:^(CGFloat percent) {
+        NSLog(@"end %lf", percent);
+    }];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    self.sliderView.currentPercent = 0.9;
+    self.sliderView.currentPercent = 0.1;
     
 }
 

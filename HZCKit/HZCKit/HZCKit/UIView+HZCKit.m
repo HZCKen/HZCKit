@@ -69,6 +69,17 @@
     [self hzc_shadowPathWithColor:shadowColor shadowOpacity:shadowOpacity shadowRadius:shadowRadius shadowOffset:CGSizeZero shadowPathType:shadowPathType shadowPathWidth:shadowPathWidth];
 }
 
+- (void)hzc_bezierPathWithRoundedRect:(UIRectCorner)corner cornerRadii:(CGSize)cornerRadii {
+    CGRect contentBounds = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+     CAShapeLayer *layer = [[CAShapeLayer alloc] init];
+     layer.bounds = contentBounds;
+     layer.position = CGPointMake(CGRectGetMidX(contentBounds), CGRectGetMidY(contentBounds));
+     layer.path = [UIBezierPath bezierPathWithRoundedRect:contentBounds byRoundingCorners:corner  cornerRadii:cornerRadii].CGPath;
+
+     self.layer.mask = layer;
+}
+
+
 - (UIImage *)hzc_getScreenshot {
     UIGraphicsBeginImageContext(CGSizeMake(self.frame.size.width, self.frame.size.height));
     CGContextRef context = UIGraphicsGetCurrentContext();

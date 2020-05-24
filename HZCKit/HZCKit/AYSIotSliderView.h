@@ -20,6 +20,14 @@ NS_ASSUME_NONNULL_BEGIN
 //@property (strong, nonatomic) UIColor *backGroundColor;
 //进度条颜色
 @property (strong, nonatomic) UIColor *progressColor;
+
+/** <#Description#> */
+@property (nonatomic, copy) void (^beginDrag)(void);
+/** <#Description#> */
+@property (nonatomic, copy) void (^endDrag)(CGFloat percent);
+/** <#Description#> */
+@property (nonatomic, copy) void (^changeDrag)(CGFloat percent);
+
 @end
 
 NS_ASSUME_NONNULL_END
