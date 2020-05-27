@@ -13,14 +13,14 @@
 
 #import "CustomSwitchView.h"
 
-#import "AYSIotSliderView.h"
+#import "AYSIotLightSliderView.h"
 #import "AYSIotCurtainSliderView.h"
 #import "Masonry.h"
 @interface ViewController1 ()
 /** <#Description#> */
 @property (nonatomic, strong) UIView *bcView;
 /** <#Description#> */
-@property (nonatomic, strong) AYSIotSliderView *sliderView;
+@property (nonatomic, strong) AYSIotLightSliderView *sliderView;
 @end
 
 @implementation ViewController1
@@ -65,7 +65,12 @@
 //    }];
 //
     
+    [self testSliderView];
+//    [self testCurtainSliderView];
 
+}
+
+- (void)testCurtainSliderView {
     AYSIotCurtainSliderView *window = [[AYSIotCurtainSliderView alloc] init];
     window.backgroundColor = [UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1.0];
     window.layer.cornerRadius = 8;
@@ -79,7 +84,7 @@
 }
 
 - (void)testSliderView {
-        AYSIotSliderView *sliderView = [[AYSIotSliderView alloc] init];
+        AYSIotLightSliderView *sliderView = [[AYSIotLightSliderView alloc] init];
         sliderView.backgroundColor = [UIColor lightGrayColor];
         sliderView.progressColor = [UIColor colorWithRed:44/255.0 green:99/255.0 blue:216/255.0 alpha:1.0];
         sliderView.layer.cornerRadius = 12;

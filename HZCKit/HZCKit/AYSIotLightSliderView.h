@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AYSIotSliderView : UIView
+@interface AYSIotLightSliderView : UIView
 
 //当前百分比
 @property (assign, nonatomic) CGFloat currentPercent;

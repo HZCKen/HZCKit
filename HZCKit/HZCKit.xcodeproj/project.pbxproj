@@ -31,6 +31,7 @@
 		188D442C2297A0C1001EFAAC /* HZCMenuLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D442B2297A0C1001EFAAC /* HZCMenuLabel.m */; };
 		18953EC72238FCA7001308FC /* UITableView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953EC62238FCA7001308FC /* UITableView+HZCKit.m */; };
 		18953ECA223902AE001308FC /* UISearchBar+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953EC9223902AE001308FC /* UISearchBar+HZCKit.m */; };
+		18DBB07E247E04FE001F7626 /* AYSIotWindowSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBB07D247E04FE001F7626 /* AYSIotWindowSliderView.m */; };
 		18DF187023D825DC00A925E4 /* UINavigationBar+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF186F23D825DC00A925E4 /* UINavigationBar+HZCKit.m */; };
 		18EAF76221CCE28A009660C1 /* UIView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF76121CCE28A009660C1 /* UIView+HZCKit.m */; };
 		18EAF76521CCE684009660C1 /* testView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF76421CCE684009660C1 /* testView.m */; };
@@ -45,7 +46,7 @@
 		18EDD43F2479096E004E8FB9 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EDD4342479096E004E8FB9 /* MASConstraint.m */; };
 		18EDD4402479096E004E8FB9 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EDD4362479096E004E8FB9 /* MASViewConstraint.m */; };
 		18EDD4412479096E004E8FB9 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EDD4372479096E004E8FB9 /* MASViewAttribute.m */; };
-		18EDD44424790BD8004E8FB9 /* AYSIotSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EDD44324790BD8004E8FB9 /* AYSIotSliderView.m */; };
+		18EDD44424790BD8004E8FB9 /* AYSIotLightSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EDD44324790BD8004E8FB9 /* AYSIotLightSliderView.m */; };
 		18FBEC7C247B68E300A88016 /* AYSIotCurtainSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FBEC7B247B68E300A88016 /* AYSIotCurtainSliderView.m */; };
 		BE1D1FDE23E3E52300334C33 /* UIImageView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D1FDD23E3E52300334C33 /* UIImageView+HZCKit.m */; };
 		BE31AD8B246F6E690095E3E6 /* HZCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE31AD8A246F6E690095E3E6 /* HZCBaseViewController.m */; };
@@ -122,6 +123,8 @@
 		18953EC62238FCA7001308FC /* UITableView+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HZCKit.m"; sourceTree = "<group>"; };
 		18953EC8223902AE001308FC /* UISearchBar+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+HZCKit.h"; sourceTree = "<group>"; };
 		18953EC9223902AE001308FC /* UISearchBar+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+HZCKit.m"; sourceTree = "<group>"; };
+		18DBB07C247E04FE001F7626 /* AYSIotWindowSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotWindowSliderView.h; sourceTree = "<group>"; };
+		18DBB07D247E04FE001F7626 /* AYSIotWindowSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotWindowSliderView.m; sourceTree = "<group>"; };
 		18DF186E23D825DC00A925E4 /* UINavigationBar+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+HZCKit.h"; sourceTree = "<group>"; };
 		18DF186F23D825DC00A925E4 /* UINavigationBar+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+HZCKit.m"; sourceTree = "<group>"; };
 		18EAF76021CCE28A009660C1 /* UIView+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HZCKit.h"; sourceTree = "<group>"; };
@@ -154,8 +157,8 @@
 		18EDD4352479096E004E8FB9 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		18EDD4362479096E004E8FB9 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		18EDD4372479096E004E8FB9 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
-		18EDD44224790BD8004E8FB9 /* AYSIotSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotSliderView.h; sourceTree = "<group>"; };
-		18EDD44324790BD8004E8FB9 /* AYSIotSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotSliderView.m; sourceTree = "<group>"; };
+		18EDD44224790BD8004E8FB9 /* AYSIotLightSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotLightSliderView.h; sourceTree = "<group>"; };
+		18EDD44324790BD8004E8FB9 /* AYSIotLightSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotLightSliderView.m; sourceTree = "<group>"; };
 		18FBEC7A247B68E300A88016 /* AYSIotCurtainSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotCurtainSliderView.h; sourceTree = "<group>"; };
 		18FBEC7B247B68E300A88016 /* AYSIotCurtainSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotCurtainSliderView.m; sourceTree = "<group>"; };
 		BE1D1FDC23E3E52300334C33 /* UIImageView+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HZCKit.h"; sourceTree = "<group>"; };
@@ -236,10 +239,12 @@
 				186DAABF211295DA004DCEFC /* AppDelegate.m */,
 				18218A2E2477642600B4C9D1 /* CustomSwitchView.h */,
 				18218A2F2477642600B4C9D1 /* CustomSwitchView.m */,
-				18EDD44224790BD8004E8FB9 /* AYSIotSliderView.h */,
-				18EDD44324790BD8004E8FB9 /* AYSIotSliderView.m */,
+				18EDD44224790BD8004E8FB9 /* AYSIotLightSliderView.h */,
+				18EDD44324790BD8004E8FB9 /* AYSIotLightSliderView.m */,
 				18FBEC7A247B68E300A88016 /* AYSIotCurtainSliderView.h */,
 				18FBEC7B247B68E300A88016 /* AYSIotCurtainSliderView.m */,
+				18DBB07C247E04FE001F7626 /* AYSIotWindowSliderView.h */,
+				18DBB07D247E04FE001F7626 /* AYSIotWindowSliderView.m */,
 				BE31AD8F246F6FA40095E3E6 /* ViewController2.h */,
 				BE31AD90246F6FA40095E3E6 /* ViewController2.m */,
 				BE31AD8C246F6F920095E3E6 /* ViewController1.h */,
@@ -506,8 +511,9 @@
 				186DAB012112990E004DCEFC /* UIImage+HZCKit.m in Sources */,
 				186DAAC3211295DA004DCEFC /* ViewController.m in Sources */,
 				181ABE4322CDA96500EA1B15 /* NSArray+HZCKit.m in Sources */,
-				18EDD44424790BD8004E8FB9 /* AYSIotSliderView.m in Sources */,
+				18EDD44424790BD8004E8FB9 /* AYSIotLightSliderView.m in Sources */,
 				18EDD4412479096E004E8FB9 /* MASViewAttribute.m in Sources */,
+				18DBB07E247E04FE001F7626 /* AYSIotWindowSliderView.m in Sources */,
 				186DAB0D2112D370004DCEFC /* NSAttributedString+HZCKit.m in Sources */,
 				BE31AD95246F6FBC0095E3E6 /* ViewController3.m in Sources */,
 				BE31AD8B246F6E690095E3E6 /* HZCBaseViewController.m in Sources */,

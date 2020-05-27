@@ -6,10 +6,10 @@
 //  Copyright © 2020 Ken. All rights reserved.
 //
 
-#import "AYSIotSliderView.h"
+#import "AYSIotLightSliderView.h"
 #import "UIView+HZCKit.h"
 
-@interface AYSIotSliderView ()
+@interface AYSIotLightSliderView ()
 
 /** <#Description#> */
 @property (nonatomic, strong) UIView *thumbView;
@@ -20,7 +20,7 @@
 @property (nonatomic, assign) CGFloat thumbWidth;
 @end
 
-@implementation AYSIotSliderView
+@implementation AYSIotLightSliderView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
