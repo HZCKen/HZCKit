@@ -46,6 +46,7 @@
 		18EDD4402479096E004E8FB9 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EDD4362479096E004E8FB9 /* MASViewConstraint.m */; };
 		18EDD4412479096E004E8FB9 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EDD4372479096E004E8FB9 /* MASViewAttribute.m */; };
 		18EDD44424790BD8004E8FB9 /* AYSIotSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EDD44324790BD8004E8FB9 /* AYSIotSliderView.m */; };
+		18FBEC7C247B68E300A88016 /* AYSIotWindowSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FBEC7B247B68E300A88016 /* AYSIotWindowSliderView.m */; };
 		BE1D1FDE23E3E52300334C33 /* UIImageView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D1FDD23E3E52300334C33 /* UIImageView+HZCKit.m */; };
 		BE31AD8B246F6E690095E3E6 /* HZCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE31AD8A246F6E690095E3E6 /* HZCBaseViewController.m */; };
 		BE31AD8E246F6F920095E3E6 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = BE31AD8D246F6F920095E3E6 /* ViewController1.m */; };
@@ -155,6 +156,8 @@
 		18EDD4372479096E004E8FB9 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		18EDD44224790BD8004E8FB9 /* AYSIotSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotSliderView.h; sourceTree = "<group>"; };
 		18EDD44324790BD8004E8FB9 /* AYSIotSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotSliderView.m; sourceTree = "<group>"; };
+		18FBEC7A247B68E300A88016 /* AYSIotWindowSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotWindowSliderView.h; sourceTree = "<group>"; };
+		18FBEC7B247B68E300A88016 /* AYSIotWindowSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotWindowSliderView.m; sourceTree = "<group>"; };
 		BE1D1FDC23E3E52300334C33 /* UIImageView+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HZCKit.h"; sourceTree = "<group>"; };
 		BE1D1FDD23E3E52300334C33 /* UIImageView+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HZCKit.m"; sourceTree = "<group>"; };
 		BE31AD89246F6E690095E3E6 /* HZCBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCBaseViewController.h; sourceTree = "<group>"; };
@@ -235,6 +238,8 @@
 				18218A2F2477642600B4C9D1 /* CustomSwitchView.m */,
 				18EDD44224790BD8004E8FB9 /* AYSIotSliderView.h */,
 				18EDD44324790BD8004E8FB9 /* AYSIotSliderView.m */,
+				18FBEC7A247B68E300A88016 /* AYSIotWindowSliderView.h */,
+				18FBEC7B247B68E300A88016 /* AYSIotWindowSliderView.m */,
 				BE31AD8F246F6FA40095E3E6 /* ViewController2.h */,
 				BE31AD90246F6FA40095E3E6 /* ViewController2.m */,
 				BE31AD8C246F6F920095E3E6 /* ViewController1.h */,
@@ -517,6 +522,7 @@
 				18EDD4402479096E004E8FB9 /* MASViewConstraint.m in Sources */,
 				185549152473DAB9008904E8 /* UITableViewCell+HZCKit.m in Sources */,
 				BEFDDAC522FDB1F4001A965D /* NSData+HZCKit.m in Sources */,
+				18FBEC7C247B68E300A88016 /* AYSIotWindowSliderView.m in Sources */,
 				18EDD4382479096E004E8FB9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				186DAAC0211295DA004DCEFC /* AppDelegate.m in Sources */,
 				18EDD4392479096E004E8FB9 /* ViewController+MASAdditions.m in Sources */,

@@ -14,6 +14,7 @@
 #import "CustomSwitchView.h"
 
 #import "AYSIotSliderView.h"
+#import "AYSIotWindowSliderView.h"
 #import "Masonry.h"
 @interface ViewController1 ()
 /** <#Description#> */
@@ -64,40 +65,58 @@
 //    }];
 //
     
-    AYSIotSliderView *sliderView = [[AYSIotSliderView alloc] init];
-    sliderView.backgroundColor = [UIColor lightGrayColor];
-    sliderView.progressColor = [UIColor colorWithRed:44/255.0 green:99/255.0 blue:216/255.0 alpha:1.0];
-    sliderView.layer.cornerRadius = 12;
-    
-    [self.view addSubview:sliderView];
-    
-    [sliderView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+    AYSIotWindowSliderView *window = [[AYSIotWindowSliderView alloc] init];
+    window.backgroundColor = [UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1.0];
+    window.layer.cornerRadius = 8;
+    [self.view addSubview:window];
+    [window mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.view.mas_centerY);
         make.centerX.equalTo(self.view.mas_centerX);
-        make.width.mas_equalTo(60);
-        make.height.mas_equalTo(200);
+        make.width.mas_equalTo(200);
+        make.height.mas_equalTo(162);
     }];
-    
-    sliderView.currentPercent = 0.2;
-    self.sliderView = sliderView;
-    
-    [sliderView setBeginDrag:^{
-       NSLog(@"%s", __FUNCTION__);
-    }];
-    
-    [sliderView setChangeDrag:^(CGFloat percent) {
-        NSLog(@"chang %lf", percent);
-    }];
-    
-    [sliderView setEndDrag:^(CGFloat percent) {
-        NSLog(@"end %lf", percent);
-    }];
-    
 }
+
+- (void)testSliderView {
+        AYSIotSliderView *sliderView = [[AYSIotSliderView alloc] init];
+        sliderView.backgroundColor = [UIColor lightGrayColor];
+        sliderView.progressColor = [UIColor colorWithRed:44/255.0 green:99/255.0 blue:216/255.0 alpha:1.0];
+        sliderView.layer.cornerRadius = 12;
+        
+        [self.view addSubview:sliderView];
+        
+        [sliderView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self.view.mas_centerY);
+            make.centerX.equalTo(self.view.mas_centerX);
+            make.width.mas_equalTo(60);
+            make.height.mas_equalTo(200);
+        }];
+        
+        sliderView.currentPercent = 0.2;
+        self.sliderView = sliderView;
+        
+        [sliderView setBeginDrag:^{
+           NSLog(@"%s", __FUNCTION__);
+        }];
+        
+        [sliderView setChangeDrag:^(CGFloat percent) {
+    //        NSLog(@"chang %lf", percent);
+        }];
+        
+        [sliderView setEndDrag:^(CGFloat percent) {
+            NSLog(@"end %lf", percent);
+        }];
+        
+        [sliderView setTouch:^(CGFloat percent) {
+            NSLog(@"touch %lf", percent);
+        }];
+}
+
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    self.sliderView.currentPercent = 0.1;
+    self.sliderView.currentPercent = 0.03;
     
 }
 

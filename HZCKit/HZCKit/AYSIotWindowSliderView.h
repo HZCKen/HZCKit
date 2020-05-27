@@ -1,8 +1,8 @@
 //
-//  AYSIotSliderView.h
+//  AYSIotWindowSliderView.h
 //  HZCKit
 //
-//  Created by Apple on 2020/5/23.
+//  Created by Apple on 2020/5/25.
 //  Copyright © 2020 Ken. All rights reserved.
 //
 
@@ -10,12 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AYSIotSliderView : UIView
-
-//当前百分比
+@interface AYSIotWindowSliderView : UIView
+//当前关闭百分比
 @property (assign, nonatomic) CGFloat currentPercent;
-//进度条颜色
-@property (strong, nonatomic) UIColor *progressColor;
 
 /** <#Description#> */
 @property (nonatomic, copy) void (^beginDrag)(void);
@@ -25,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) void (^changeDrag)(CGFloat percent);
 /** <#Description#> */
 @property (nonatomic, copy) void (^touch)(CGFloat percent);
+
 @end
 
 NS_ASSUME_NONNULL_END
