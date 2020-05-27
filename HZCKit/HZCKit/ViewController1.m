@@ -14,7 +14,7 @@
 #import "CustomSwitchView.h"
 
 #import "AYSIotSliderView.h"
-#import "AYSIotWindowSliderView.h"
+#import "AYSIotCurtainSliderView.h"
 #import "Masonry.h"
 @interface ViewController1 ()
 /** <#Description#> */
@@ -66,7 +66,7 @@
 //
     
 
-    AYSIotWindowSliderView *window = [[AYSIotWindowSliderView alloc] init];
+    AYSIotCurtainSliderView *window = [[AYSIotCurtainSliderView alloc] init];
     window.backgroundColor = [UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1.0];
     window.layer.cornerRadius = 8;
     [self.view addSubview:window];

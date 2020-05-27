@@ -6,11 +6,11 @@
 //  Copyright © 2020 Ken. All rights reserved.
 //
 
-#import "AYSIotWindowSliderView.h"
+#import "AYSIotCurtainSliderView.h"
 #import "Masonry.h"
 #import "UIView+HZCKit.h"
 
-@interface AYSIotWindowSliderView ()
+@interface AYSIotCurtainSliderView ()
 /** <#Description#> */
 @property (nonatomic, strong) UIView *topView;
 /** <#Description#> */
@@ -19,7 +19,7 @@
 @property (nonatomic, strong) UIView *rightView;
 @end
 
-@implementation AYSIotWindowSliderView
+@implementation AYSIotCurtainSliderView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
