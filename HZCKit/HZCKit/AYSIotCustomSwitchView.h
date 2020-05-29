@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CustomSwitchView : UIView
+@interface AYSIotCustomSwitchView : UIView
 
 /** <#Description#> */
 @property (nonatomic, assign) BOOL isOn;

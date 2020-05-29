@@ -6,9 +6,9 @@
 //  Copyright © 2020 Ken. All rights reserved.
 //
 
-#import "CustomSwitchView.h"
+#import "AYSIotCustomSwitchView.h"
 
-@interface CustomSwitchView ()
+@interface AYSIotCustomSwitchView ()
 
 /** <#Description#> */
 @property (nonatomic, strong) UIView *backGroundView;
@@ -24,7 +24,7 @@
 @end
 
 
-@implementation CustomSwitchView
+@implementation AYSIotCustomSwitchView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {

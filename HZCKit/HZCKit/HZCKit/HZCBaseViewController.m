@@ -163,8 +163,7 @@ isPhoneX;\
 #pragma mark 自定义导航栏
 -(void)customNavBar{
     self.navgateView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kNewNavHeight)];
-    self.navgateView.backgroundColor=[UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
-//    self.navgateView.backgroundColor = [UIColor whiteColor];
+    self.navgateView.backgroundColor= [UIColor whiteColor];
     [self.view addSubview:self.navgateView];
     
     backBtn=[[UIButton alloc] initWithFrame:CGRectMake(5,KStatusHeight + 2, 40, 40)];
@@ -185,6 +184,11 @@ isPhoneX;\
     rightBtn=[[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth-45, KStatusHeight+2, 40, 40)];
     [rightBtn addTarget:self action:@selector(rightButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [self.navgateView addSubview:rightBtn];
+    
+    self.navgateView.layer.shadowColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.08].CGColor;
+    self.navgateView.layer.shadowOffset = CGSizeMake(0,3);
+    self.navgateView.layer.shadowOpacity = 1;
+    self.navgateView.layer.shadowRadius = 10;
 
 }
 #pragma mark - UIGestureRecognizerDelegate

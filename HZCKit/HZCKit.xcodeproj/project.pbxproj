@@ -10,9 +10,21 @@
 		181ABE4322CDA96500EA1B15 /* NSArray+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ABE4222CDA96500EA1B15 /* NSArray+HZCKit.m */; };
 		181E8D59224C9BE8007DDDC5 /* UIButton+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 181E8D58224C9BE8007DDDC5 /* UIButton+HZCKit.m */; };
 		1821079B22E83FAF0066CD5F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1821079A22E83FAE0066CD5F /* libz.tbd */; };
-		18218A302477642600B4C9D1 /* CustomSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18218A2F2477642600B4C9D1 /* CustomSwitchView.m */; };
+		18218A302477642600B4C9D1 /* AYSIotCustomSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18218A2F2477642600B4C9D1 /* AYSIotCustomSwitchView.m */; };
 		18218A332477783700B4C9D1 /* AYSIotRoomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18218A322477783700B4C9D1 /* AYSIotRoomLabel.m */; };
 		185549152473DAB9008904E8 /* UITableViewCell+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 185549142473DAB9008904E8 /* UITableViewCell+HZCKit.m */; };
+		1856452B247F4F0D002495B9 /* UIView+ScottAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18564519247F4F0C002495B9 /* UIView+ScottAlertView.m */; };
+		1856452C247F4F0D002495B9 /* ScottAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856451B247F4F0C002495B9 /* ScottAlertView.m */; };
+		1856452D247F4F0D002495B9 /* ScottShowAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856451D247F4F0C002495B9 /* ScottShowAlertView.m */; };
+		1856452E247F4F0D002495B9 /* UIView+ScottAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856451F247F4F0C002495B9 /* UIView+ScottAutoLayout.m */; };
+		1856452F247F4F0D002495B9 /* ScottFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18564522247F4F0C002495B9 /* ScottFadeAnimation.m */; };
+		18564530247F4F0D002495B9 /* ScottDropDownAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18564526247F4F0C002495B9 /* ScottDropDownAnimation.m */; };
+		18564531247F4F0D002495B9 /* ScottBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18564528247F4F0C002495B9 /* ScottBaseAnimation.m */; };
+		18564532247F4F0D002495B9 /* ScottScaleFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18564529247F4F0C002495B9 /* ScottScaleFadeAnimation.m */; };
+		18564533247F4F0D002495B9 /* ScottAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856452A247F4F0C002495B9 /* ScottAlertViewController.m */; };
+		18564536247F5252002495B9 /* AYSIotCustomTextFieldAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18564535247F5252002495B9 /* AYSIotCustomTextFieldAlertView.m */; };
+		18564538247F528D002495B9 /* AYSIotCustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18564537247F528D002495B9 /* AYSIotCustomAlertView.xib */; };
+		1856453B247F6B90002495B9 /* AYSIotAlertTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856453A247F6B90002495B9 /* AYSIotAlertTool.m */; };
 		186DAAC0211295DA004DCEFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAABF211295DA004DCEFC /* AppDelegate.m */; };
 		186DAAC3211295DA004DCEFC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAC2211295DA004DCEFC /* ViewController.m */; };
 		186DAAC6211295DA004DCEFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186DAAC4211295DA004DCEFC /* Main.storyboard */; };
@@ -31,7 +43,12 @@
 		188D442C2297A0C1001EFAAC /* HZCMenuLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D442B2297A0C1001EFAAC /* HZCMenuLabel.m */; };
 		18953EC72238FCA7001308FC /* UITableView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953EC62238FCA7001308FC /* UITableView+HZCKit.m */; };
 		18953ECA223902AE001308FC /* UISearchBar+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953EC9223902AE001308FC /* UISearchBar+HZCKit.m */; };
+		18A254F8247F8D0E004BE475 /* AYSIotTwoButtonAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A254F7247F8D0E004BE475 /* AYSIotTwoButtonAlertView.m */; };
+		18A254FA247F8D23004BE475 /* AYSIotTwoButtonAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A254F9247F8D23004BE475 /* AYSIotTwoButtonAlertView.xib */; };
+		18A254FD247FA037004BE475 /* AYSIotAlertButtonConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A254FC247FA037004BE475 /* AYSIotAlertButtonConfigure.m */; };
+		18D6E3C72480A0AC00820580 /* AYSIotLabelAlertView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6E3C62480A0AC00820580 /* AYSIotLabelAlertView2.m */; };
 		18DBB07E247E04FE001F7626 /* AYSIotWindowSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBB07D247E04FE001F7626 /* AYSIotWindowSliderView.m */; };
+		18DBB081247E0C7C001F7626 /* AYSIotSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBB080247E0C7C001F7626 /* AYSIotSliderView.m */; };
 		18DF187023D825DC00A925E4 /* UINavigationBar+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF186F23D825DC00A925E4 /* UINavigationBar+HZCKit.m */; };
 		18EAF76221CCE28A009660C1 /* UIView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF76121CCE28A009660C1 /* UIView+HZCKit.m */; };
 		18EAF76521CCE684009660C1 /* testView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF76421CCE684009660C1 /* testView.m */; };
@@ -80,12 +97,36 @@
 		181E8D57224C9BE8007DDDC5 /* UIButton+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+HZCKit.h"; sourceTree = "<group>"; };
 		181E8D58224C9BE8007DDDC5 /* UIButton+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+HZCKit.m"; sourceTree = "<group>"; };
 		1821079A22E83FAE0066CD5F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		18218A2E2477642600B4C9D1 /* CustomSwitchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSwitchView.h; sourceTree = "<group>"; };
-		18218A2F2477642600B4C9D1 /* CustomSwitchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSwitchView.m; sourceTree = "<group>"; };
+		18218A2E2477642600B4C9D1 /* AYSIotCustomSwitchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotCustomSwitchView.h; sourceTree = "<group>"; };
+		18218A2F2477642600B4C9D1 /* AYSIotCustomSwitchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotCustomSwitchView.m; sourceTree = "<group>"; };
 		18218A312477783700B4C9D1 /* AYSIotRoomLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotRoomLabel.h; sourceTree = "<group>"; };
 		18218A322477783700B4C9D1 /* AYSIotRoomLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotRoomLabel.m; sourceTree = "<group>"; };
 		185549132473DAB9008904E8 /* UITableViewCell+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+HZCKit.h"; sourceTree = "<group>"; };
 		185549142473DAB9008904E8 /* UITableViewCell+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+HZCKit.m"; sourceTree = "<group>"; };
+		18564516247F4F0C002495B9 /* ScottAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottAlertViewController.h; sourceTree = "<group>"; };
+		18564518247F4F0C002495B9 /* ScottShowAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottShowAlertView.h; sourceTree = "<group>"; };
+		18564519247F4F0C002495B9 /* UIView+ScottAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScottAlertView.m"; sourceTree = "<group>"; };
+		1856451A247F4F0C002495B9 /* UIView+ScottAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ScottAutoLayout.h"; sourceTree = "<group>"; };
+		1856451B247F4F0C002495B9 /* ScottAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottAlertView.m; sourceTree = "<group>"; };
+		1856451C247F4F0C002495B9 /* UIView+ScottAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ScottAlertView.h"; sourceTree = "<group>"; };
+		1856451D247F4F0C002495B9 /* ScottShowAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottShowAlertView.m; sourceTree = "<group>"; };
+		1856451E247F4F0C002495B9 /* ScottAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottAlertView.h; sourceTree = "<group>"; };
+		1856451F247F4F0C002495B9 /* UIView+ScottAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScottAutoLayout.m"; sourceTree = "<group>"; };
+		18564520247F4F0C002495B9 /* ScottAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottAlertController.h; sourceTree = "<group>"; };
+		18564522247F4F0C002495B9 /* ScottFadeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottFadeAnimation.m; sourceTree = "<group>"; };
+		18564523247F4F0C002495B9 /* ScottDropDownAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottDropDownAnimation.h; sourceTree = "<group>"; };
+		18564524247F4F0C002495B9 /* ScottScaleFadeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottScaleFadeAnimation.h; sourceTree = "<group>"; };
+		18564525247F4F0C002495B9 /* ScottBaseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottBaseAnimation.h; sourceTree = "<group>"; };
+		18564526247F4F0C002495B9 /* ScottDropDownAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottDropDownAnimation.m; sourceTree = "<group>"; };
+		18564527247F4F0C002495B9 /* ScottFadeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottFadeAnimation.h; sourceTree = "<group>"; };
+		18564528247F4F0C002495B9 /* ScottBaseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottBaseAnimation.m; sourceTree = "<group>"; };
+		18564529247F4F0C002495B9 /* ScottScaleFadeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottScaleFadeAnimation.m; sourceTree = "<group>"; };
+		1856452A247F4F0C002495B9 /* ScottAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottAlertViewController.m; sourceTree = "<group>"; };
+		18564534247F5252002495B9 /* AYSIotCustomTextFieldAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotCustomTextFieldAlertView.h; sourceTree = "<group>"; };
+		18564535247F5252002495B9 /* AYSIotCustomTextFieldAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotCustomTextFieldAlertView.m; sourceTree = "<group>"; };
+		18564537247F528D002495B9 /* AYSIotCustomAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AYSIotCustomAlertView.xib; sourceTree = "<group>"; };
+		18564539247F6B90002495B9 /* AYSIotAlertTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotAlertTool.h; sourceTree = "<group>"; };
+		1856453A247F6B90002495B9 /* AYSIotAlertTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotAlertTool.m; sourceTree = "<group>"; };
 		186DAABB211295DA004DCEFC /* HZCKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZCKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186DAABE211295DA004DCEFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		186DAABF211295DA004DCEFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,8 +164,17 @@
 		18953EC62238FCA7001308FC /* UITableView+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HZCKit.m"; sourceTree = "<group>"; };
 		18953EC8223902AE001308FC /* UISearchBar+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+HZCKit.h"; sourceTree = "<group>"; };
 		18953EC9223902AE001308FC /* UISearchBar+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+HZCKit.m"; sourceTree = "<group>"; };
+		18A254F6247F8D0E004BE475 /* AYSIotTwoButtonAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotTwoButtonAlertView.h; sourceTree = "<group>"; };
+		18A254F7247F8D0E004BE475 /* AYSIotTwoButtonAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotTwoButtonAlertView.m; sourceTree = "<group>"; };
+		18A254F9247F8D23004BE475 /* AYSIotTwoButtonAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AYSIotTwoButtonAlertView.xib; sourceTree = "<group>"; };
+		18A254FB247FA037004BE475 /* AYSIotAlertButtonConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotAlertButtonConfigure.h; sourceTree = "<group>"; };
+		18A254FC247FA037004BE475 /* AYSIotAlertButtonConfigure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotAlertButtonConfigure.m; sourceTree = "<group>"; };
+		18D6E3C52480A0AC00820580 /* AYSIotLabelAlertView2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotLabelAlertView2.h; sourceTree = "<group>"; };
+		18D6E3C62480A0AC00820580 /* AYSIotLabelAlertView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotLabelAlertView2.m; sourceTree = "<group>"; };
 		18DBB07C247E04FE001F7626 /* AYSIotWindowSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotWindowSliderView.h; sourceTree = "<group>"; };
 		18DBB07D247E04FE001F7626 /* AYSIotWindowSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotWindowSliderView.m; sourceTree = "<group>"; };
+		18DBB07F247E0C7C001F7626 /* AYSIotSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotSliderView.h; sourceTree = "<group>"; };
+		18DBB080247E0C7C001F7626 /* AYSIotSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotSliderView.m; sourceTree = "<group>"; };
 		18DF186E23D825DC00A925E4 /* UINavigationBar+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+HZCKit.h"; sourceTree = "<group>"; };
 		18DF186F23D825DC00A925E4 /* UINavigationBar+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+HZCKit.m"; sourceTree = "<group>"; };
 		18EAF76021CCE28A009660C1 /* UIView+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HZCKit.h"; sourceTree = "<group>"; };
@@ -210,6 +260,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		18564515247F4F0C002495B9 /* ScottAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				18564516247F4F0C002495B9 /* ScottAlertViewController.h */,
+				18564517247F4F0C002495B9 /* ScottAlertView */,
+				18564520247F4F0C002495B9 /* ScottAlertController.h */,
+				18564521247F4F0C002495B9 /* ScottAlertAnimations */,
+				1856452A247F4F0C002495B9 /* ScottAlertViewController.m */,
+			);
+			path = ScottAlertController;
+			sourceTree = "<group>";
+		};
+		18564517247F4F0C002495B9 /* ScottAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				18564518247F4F0C002495B9 /* ScottShowAlertView.h */,
+				18564519247F4F0C002495B9 /* UIView+ScottAlertView.m */,
+				1856451A247F4F0C002495B9 /* UIView+ScottAutoLayout.h */,
+				1856451B247F4F0C002495B9 /* ScottAlertView.m */,
+				1856451C247F4F0C002495B9 /* UIView+ScottAlertView.h */,
+				1856451D247F4F0C002495B9 /* ScottShowAlertView.m */,
+				1856451E247F4F0C002495B9 /* ScottAlertView.h */,
+				1856451F247F4F0C002495B9 /* UIView+ScottAutoLayout.m */,
+			);
+			path = ScottAlertView;
+			sourceTree = "<group>";
+		};
+		18564521247F4F0C002495B9 /* ScottAlertAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				18564522247F4F0C002495B9 /* ScottFadeAnimation.m */,
+				18564523247F4F0C002495B9 /* ScottDropDownAnimation.h */,
+				18564524247F4F0C002495B9 /* ScottScaleFadeAnimation.h */,
+				18564525247F4F0C002495B9 /* ScottBaseAnimation.h */,
+				18564526247F4F0C002495B9 /* ScottDropDownAnimation.m */,
+				18564527247F4F0C002495B9 /* ScottFadeAnimation.h */,
+				18564528247F4F0C002495B9 /* ScottBaseAnimation.m */,
+				18564529247F4F0C002495B9 /* ScottScaleFadeAnimation.m */,
+			);
+			path = ScottAlertAnimations;
+			sourceTree = "<group>";
+		};
 		186DAAB2211295DA004DCEFC = {
 			isa = PBXGroup;
 			children = (
@@ -237,14 +329,28 @@
 				186DAAF0211295F9004DCEFC /* HZCKit */,
 				186DAABE211295DA004DCEFC /* AppDelegate.h */,
 				186DAABF211295DA004DCEFC /* AppDelegate.m */,
-				18218A2E2477642600B4C9D1 /* CustomSwitchView.h */,
-				18218A2F2477642600B4C9D1 /* CustomSwitchView.m */,
+				18A254FB247FA037004BE475 /* AYSIotAlertButtonConfigure.h */,
+				18A254FC247FA037004BE475 /* AYSIotAlertButtonConfigure.m */,
+				18564539247F6B90002495B9 /* AYSIotAlertTool.h */,
+				1856453A247F6B90002495B9 /* AYSIotAlertTool.m */,
+				18218A2E2477642600B4C9D1 /* AYSIotCustomSwitchView.h */,
+				18218A2F2477642600B4C9D1 /* AYSIotCustomSwitchView.m */,
 				18EDD44224790BD8004E8FB9 /* AYSIotLightSliderView.h */,
 				18EDD44324790BD8004E8FB9 /* AYSIotLightSliderView.m */,
 				18FBEC7A247B68E300A88016 /* AYSIotCurtainSliderView.h */,
 				18FBEC7B247B68E300A88016 /* AYSIotCurtainSliderView.m */,
 				18DBB07C247E04FE001F7626 /* AYSIotWindowSliderView.h */,
 				18DBB07D247E04FE001F7626 /* AYSIotWindowSliderView.m */,
+				18DBB07F247E0C7C001F7626 /* AYSIotSliderView.h */,
+				18DBB080247E0C7C001F7626 /* AYSIotSliderView.m */,
+				18D6E3C52480A0AC00820580 /* AYSIotLabelAlertView2.h */,
+				18D6E3C62480A0AC00820580 /* AYSIotLabelAlertView2.m */,
+				18A254F6247F8D0E004BE475 /* AYSIotTwoButtonAlertView.h */,
+				18A254F7247F8D0E004BE475 /* AYSIotTwoButtonAlertView.m */,
+				18A254F9247F8D23004BE475 /* AYSIotTwoButtonAlertView.xib */,
+				18564534247F5252002495B9 /* AYSIotCustomTextFieldAlertView.h */,
+				18564535247F5252002495B9 /* AYSIotCustomTextFieldAlertView.m */,
+				18564537247F528D002495B9 /* AYSIotCustomAlertView.xib */,
 				BE31AD8F246F6FA40095E3E6 /* ViewController2.h */,
 				BE31AD90246F6FA40095E3E6 /* ViewController2.m */,
 				BE31AD8C246F6F920095E3E6 /* ViewController1.h */,
@@ -264,6 +370,7 @@
 				18EAF76321CCE684009660C1 /* testView.h */,
 				18EAF76421CCE684009660C1 /* testView.m */,
 				18EAF76821CCEAA5009660C1 /* testView.xib */,
+				18564515247F4F0C002495B9 /* ScottAlertController */,
 				18EDD41E2479096D004E8FB9 /* Masonry */,
 			);
 			path = HZCKit;
@@ -467,8 +574,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				18EAF76921CCEAA5009660C1 /* testView.xib in Resources */,
+				18A254FA247F8D23004BE475 /* AYSIotTwoButtonAlertView.xib in Resources */,
 				186DAACB211295DF004DCEFC /* LaunchScreen.storyboard in Resources */,
 				186DAAC8211295DF004DCEFC /* Assets.xcassets in Resources */,
+				18564538247F528D002495B9 /* AYSIotCustomAlertView.xib in Resources */,
 				186DAAC6211295DA004DCEFC /* Main.storyboard in Resources */,
 				BE31AD96246F6FBC0095E3E6 /* ViewController3.xib in Resources */,
 			);
@@ -495,18 +604,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A254FD247FA037004BE475 /* AYSIotAlertButtonConfigure.m in Sources */,
 				18953ECA223902AE001308FC /* UISearchBar+HZCKit.m in Sources */,
 				18953EC72238FCA7001308FC /* UITableView+HZCKit.m in Sources */,
+				18564530247F4F0D002495B9 /* ScottDropDownAnimation.m in Sources */,
+				1856453B247F6B90002495B9 /* AYSIotAlertTool.m in Sources */,
 				18EAF76521CCE684009660C1 /* testView.m in Sources */,
+				18A254F8247F8D0E004BE475 /* AYSIotTwoButtonAlertView.m in Sources */,
 				BE1D1FDE23E3E52300334C33 /* UIImageView+HZCKit.m in Sources */,
+				18D6E3C72480A0AC00820580 /* AYSIotLabelAlertView2.m in Sources */,
 				18EDD43A2479096E004E8FB9 /* MASCompositeConstraint.m in Sources */,
 				18EDD43D2479096E004E8FB9 /* NSArray+MASAdditions.m in Sources */,
+				18564531247F4F0D002495B9 /* ScottBaseAnimation.m in Sources */,
 				188D442C2297A0C1001EFAAC /* HZCMenuLabel.m in Sources */,
 				1878F83F211C17A100B423F9 /* NSObject+HZCKit.m in Sources */,
 				186DAB022112990E004DCEFC /* NSMutableAttributedString+HZCKit.m in Sources */,
 				18EAF76221CCE28A009660C1 /* UIView+HZCKit.m in Sources */,
+				1856452E247F4F0D002495B9 /* UIView+ScottAutoLayout.m in Sources */,
+				1856452B247F4F0D002495B9 /* UIView+ScottAlertView.m in Sources */,
 				186DAB0A21129B47004DCEFC /* UILabel+HZCKit.m in Sources */,
-				18218A302477642600B4C9D1 /* CustomSwitchView.m in Sources */,
+				18218A302477642600B4C9D1 /* AYSIotCustomSwitchView.m in Sources */,
+				1856452F247F4F0D002495B9 /* ScottFadeAnimation.m in Sources */,
+				18564533247F4F0D002495B9 /* ScottAlertViewController.m in Sources */,
 				18DF187023D825DC00A925E4 /* UINavigationBar+HZCKit.m in Sources */,
 				186DAB012112990E004DCEFC /* UIImage+HZCKit.m in Sources */,
 				186DAAC3211295DA004DCEFC /* ViewController.m in Sources */,
@@ -518,15 +637,20 @@
 				BE31AD95246F6FBC0095E3E6 /* ViewController3.m in Sources */,
 				BE31AD8B246F6E690095E3E6 /* HZCBaseViewController.m in Sources */,
 				18EDD43F2479096E004E8FB9 /* MASConstraint.m in Sources */,
+				18564536247F5252002495B9 /* AYSIotCustomTextFieldAlertView.m in Sources */,
 				181E8D59224C9BE8007DDDC5 /* UIButton+HZCKit.m in Sources */,
 				18EDD43B2479096E004E8FB9 /* MASConstraintMaker.m in Sources */,
 				18EDD43C2479096E004E8FB9 /* MASLayoutConstraint.m in Sources */,
 				18EDD43E2479096E004E8FB9 /* View+MASAdditions.m in Sources */,
+				1856452D247F4F0D002495B9 /* ScottShowAlertView.m in Sources */,
 				186DAACE211295DF004DCEFC /* main.m in Sources */,
+				18DBB081247E0C7C001F7626 /* AYSIotSliderView.m in Sources */,
+				18564532247F4F0D002495B9 /* ScottScaleFadeAnimation.m in Sources */,
 				186DAB032112990E004DCEFC /* UIColor+HZCKit.m in Sources */,
 				BE31AD8E246F6F920095E3E6 /* ViewController1.m in Sources */,
 				18EDD4402479096E004E8FB9 /* MASViewConstraint.m in Sources */,
 				185549152473DAB9008904E8 /* UITableViewCell+HZCKit.m in Sources */,
+				1856452C247F4F0D002495B9 /* ScottAlertView.m in Sources */,
 				BEFDDAC522FDB1F4001A965D /* NSData+HZCKit.m in Sources */,
 				18FBEC7C247B68E300A88016 /* AYSIotCurtainSliderView.m in Sources */,
 				18EDD4382479096E004E8FB9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
