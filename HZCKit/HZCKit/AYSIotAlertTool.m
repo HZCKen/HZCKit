@@ -10,7 +10,7 @@
 #import "ScottAlertController.h"
 #import "AYSIotCustomTextFieldAlertView.h"
 #import "AYSIotTwoButtonAlertView.h"
-#import "AYSIotLabelAlertView2.h"
+#import "AYSIotLabelAlertView.h"
 
 
 @implementation AYSIotAlertTool
@@ -148,7 +148,7 @@
 }
 
 + (void)showMessageAlert:(UIViewController *)targetVC text:(NSString *)text {
-    AYSIotLabelAlertView2 *customAlert = [[AYSIotLabelAlertView2 alloc] init];
+    AYSIotLabelAlertView *customAlert = [[AYSIotLabelAlertView alloc] init];
     
     customAlert.text = text;
     

@@ -46,7 +46,7 @@
 		18A254F8247F8D0E004BE475 /* AYSIotTwoButtonAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A254F7247F8D0E004BE475 /* AYSIotTwoButtonAlertView.m */; };
 		18A254FA247F8D23004BE475 /* AYSIotTwoButtonAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A254F9247F8D23004BE475 /* AYSIotTwoButtonAlertView.xib */; };
 		18A254FD247FA037004BE475 /* AYSIotAlertButtonConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A254FC247FA037004BE475 /* AYSIotAlertButtonConfigure.m */; };
-		18D6E3C72480A0AC00820580 /* AYSIotLabelAlertView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6E3C62480A0AC00820580 /* AYSIotLabelAlertView2.m */; };
+		18D6E3C72480A0AC00820580 /* AYSIotLabelAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6E3C62480A0AC00820580 /* AYSIotLabelAlertView.m */; };
 		18DBB07E247E04FE001F7626 /* AYSIotWindowSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBB07D247E04FE001F7626 /* AYSIotWindowSliderView.m */; };
 		18DBB081247E0C7C001F7626 /* AYSIotSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBB080247E0C7C001F7626 /* AYSIotSliderView.m */; };
 		18DF187023D825DC00A925E4 /* UINavigationBar+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF186F23D825DC00A925E4 /* UINavigationBar+HZCKit.m */; };
@@ -169,8 +169,8 @@
 		18A254F9247F8D23004BE475 /* AYSIotTwoButtonAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AYSIotTwoButtonAlertView.xib; sourceTree = "<group>"; };
 		18A254FB247FA037004BE475 /* AYSIotAlertButtonConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotAlertButtonConfigure.h; sourceTree = "<group>"; };
 		18A254FC247FA037004BE475 /* AYSIotAlertButtonConfigure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotAlertButtonConfigure.m; sourceTree = "<group>"; };
-		18D6E3C52480A0AC00820580 /* AYSIotLabelAlertView2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotLabelAlertView2.h; sourceTree = "<group>"; };
-		18D6E3C62480A0AC00820580 /* AYSIotLabelAlertView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotLabelAlertView2.m; sourceTree = "<group>"; };
+		18D6E3C52480A0AC00820580 /* AYSIotLabelAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotLabelAlertView.h; sourceTree = "<group>"; };
+		18D6E3C62480A0AC00820580 /* AYSIotLabelAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotLabelAlertView.m; sourceTree = "<group>"; };
 		18DBB07C247E04FE001F7626 /* AYSIotWindowSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotWindowSliderView.h; sourceTree = "<group>"; };
 		18DBB07D247E04FE001F7626 /* AYSIotWindowSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotWindowSliderView.m; sourceTree = "<group>"; };
 		18DBB07F247E0C7C001F7626 /* AYSIotSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotSliderView.h; sourceTree = "<group>"; };
@@ -343,8 +343,8 @@
 				18DBB07D247E04FE001F7626 /* AYSIotWindowSliderView.m */,
 				18DBB07F247E0C7C001F7626 /* AYSIotSliderView.h */,
 				18DBB080247E0C7C001F7626 /* AYSIotSliderView.m */,
-				18D6E3C52480A0AC00820580 /* AYSIotLabelAlertView2.h */,
-				18D6E3C62480A0AC00820580 /* AYSIotLabelAlertView2.m */,
+				18D6E3C52480A0AC00820580 /* AYSIotLabelAlertView.h */,
+				18D6E3C62480A0AC00820580 /* AYSIotLabelAlertView.m */,
 				18A254F6247F8D0E004BE475 /* AYSIotTwoButtonAlertView.h */,
 				18A254F7247F8D0E004BE475 /* AYSIotTwoButtonAlertView.m */,
 				18A254F9247F8D23004BE475 /* AYSIotTwoButtonAlertView.xib */,
@@ -612,7 +612,7 @@
 				18EAF76521CCE684009660C1 /* testView.m in Sources */,
 				18A254F8247F8D0E004BE475 /* AYSIotTwoButtonAlertView.m in Sources */,
 				BE1D1FDE23E3E52300334C33 /* UIImageView+HZCKit.m in Sources */,
-				18D6E3C72480A0AC00820580 /* AYSIotLabelAlertView2.m in Sources */,
+				18D6E3C72480A0AC00820580 /* AYSIotLabelAlertView.m in Sources */,
 				18EDD43A2479096E004E8FB9 /* MASCompositeConstraint.m in Sources */,
 				18EDD43D2479096E004E8FB9 /* NSArray+MASAdditions.m in Sources */,
 				18564531247F4F0D002495B9 /* ScottBaseAnimation.m in Sources */,

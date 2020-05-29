@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AYSIotLabelAlertView2 : UIView
+@interface AYSIotLabelAlertView : UIView
 /** <#Description#> */
 @property (nonatomic, copy) NSString *text;
 /** <#Description#> */

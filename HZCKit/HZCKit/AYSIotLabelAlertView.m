@@ -6,17 +6,17 @@
 //  Copyright © 2020 Ken. All rights reserved.
 //
 
-#import "AYSIotLabelAlertView2.h"
+#import "AYSIotLabelAlertView.h"
 
 #import "UIView+HZCKit.h"
 #import "Masonry.h"
-@interface AYSIotLabelAlertView2 ()
+@interface AYSIotLabelAlertView ()
 @property (strong, nonatomic)  UIView *bgView;
 @property (strong, nonatomic)  UILabel *tipLabel;
 
 @end
 
-@implementation AYSIotLabelAlertView2
+@implementation AYSIotLabelAlertView
 
 
 - (instancetype)initWithFrame:(CGRect)frame {
