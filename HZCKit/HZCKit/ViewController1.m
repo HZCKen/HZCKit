@@ -16,17 +16,31 @@
 #import "AYSIotCurtainSliderView.h"
 #import "AYSIotSliderView.h"
 #import "AYSIotWindowSliderView.h"
-
+#import "AYSIotRoomLabel.h"
 #import "AYSIotCustomTextFieldAlertView.h"
 #import "ScottAlertController.h"
-
+#import "AYSIotRoomCollectionViewCell.h"
 #import "AYSIotAlertTool.h"
 #import "Masonry.h"
-@interface ViewController1 ()
+@interface ViewController1 ()<UICollectionViewDelegate, UICollectionViewDataSource>
 /** <#Description#> */
 @property (nonatomic, strong) UIView *bcView;
 /** <#Description#> */
 @property (nonatomic, strong) AYSIotLightSliderView *sliderView;
+/** <#Description#> */
+@property (nonatomic, strong) UIScrollView *scrollView;
+/** <#Description#> */
+@property (nonatomic, strong) UIView *lineView;
+/** <#Description#> */
+@property (nonatomic, assign) NSInteger currentIndex;
+
+/** <#Description#> */
+@property (nonatomic, strong) NSArray *datas;
+
+/** <#Description#> */
+@property (nonatomic, strong) UICollectionView *collectionView;
+@property (strong, nonatomic)  UICollectionViewFlowLayout *layout;
+
 @end
 
 @implementation ViewController1
@@ -36,81 +50,220 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-//    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-//    button.frame = CGRectMake(59, 64, 100, 100);
-//    [button setBackgroundColor:[UIColor blueColor]];
-//    button.layer.cornerRadius = 10;
-//    [button hzc_shadowPathWithColor:[UIColor redColor] shadowOpacity:1 shadowRadius:10 shadowPathType:kShadowPathAround shadowPathWidth:10];
-//    [self.view addSubview:button];
-//    [button addTarget:self action:@selector(clickButton) forControlEvents:(UIControlEventTouchUpInside)];
-//
-//    UIView *bcView = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
-//    [self.view addSubview:bcView];
-//    self.bcView = bcView;
-//    bcView.backgroundColor = [UIColor brownColor];
-//    [self.bcView hzc_shadowPathWithColor:[UIColor greenColor] shadowOpacity:1 shadowRadius:10 shadowPathType:kShadowPathAround shadowPathWidth:10];
-//    
-//    UILabel *label = [[UILabel alloc] init];
-//    [self.view addSubview:label];
+    NSArray *datas = @[@"客厅", @"儿童房", @"客厅",@"客厅",@"健身室", @"厨房" ];
+    self.datas = datas;
 
-//    CustomSwitchView *switchView = [[CustomSwitchView alloc] init];
-////    switchView.frame = CGRectMake(197.7,300,47,22);
-////    switchView.layer.cornerRadius = 7.3;
-//    [self.view addSubview:switchView];
-//
-//
-//    [switchView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.width.mas_equalTo(47);
-//        make.height.mas_equalTo(22);
-//        make.centerX.equalTo(self.view.mas_centerX);
-//        make.centerY.equalTo(self.view.mas_centerY);
-//    }];
-//
-//    [switchView setSwitchVauleChange:^(BOOL isOn) {
-//        NSLog(@"%d", isOn);
-//    }];
-//
     
-//    [self testLightSliderView];
-//    [self testCurtainSliderView];
-//    [self testSliderView];
-//    [self testWidowSliderView];
-//    UIView *view1 = [[UIView alloc] init];
-//    view1.frame = CGRectMake(53,180,207.8,142.2);
-//    view1.backgroundColor = [UIColor colorWithRed:44/255.0 green:99/255.0 blue:216/255.0 alpha:1.0];
-//    view1.layer.shadowColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.1].CGColor;
-//    view1.layer.shadowOffset = CGSizeMake(0,10);
-//    view1.layer.shadowOpacity = 1;
-//    view1.layer.shadowRadius = 15;
-//    view1.layer.cornerRadius = 8;
-//    [self.view addSubview:view1];
+    [self testscrollView];
+    self.layout = [[UICollectionViewFlowLayout alloc] init];
+      
+      self.collectionView  = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 300) collectionViewLayout:self.layout];
+      [self.collectionView registerClass:[AYSIotRoomCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+      [self.view addSubview:self.collectionView];
+      self.collectionView.dataSource = self;
+      self.collectionView.delegate = self;
+      [self.collectionView reloadData];
     
-//    AYSIotCustomAlertView *customAlert = [AYSIotCustomAlertView customAlertView];
-////    customAlert.frame = CGRectMake(100, 100, 268, 185);
-//    [self.view addSubview:customAlert];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self setupLayout];
+}
+
+/**
+ *  设置布局
+ */
+-(void)setupLayout
+{
+    self.layout.itemSize = self.collectionView.bounds.size;
+
+    NSLog(@"%@",NSStringFromCGRect(self.collectionView.bounds));
+
+    self.layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+
+    self.layout.minimumLineSpacing = 0;
+
+    self.layout.minimumInteritemSpacing = 0;
+
+    self.collectionView.pagingEnabled = YES;
+
+    self.collectionView.bounces = NO;
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        self.datas = @[@"1",@"2"];
+//         [self testscrollView];
+//    });
+}
+
+- (void)testscrollView {
+
+    if ([self.view.subviews containsObject:self.scrollView]) {
+        [self.scrollView removeFromSuperview];
+    }
+
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    self.scrollView = scrollView;
+    [self.view addSubview:scrollView];
+    scrollView.frame = CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width - 80, 40);
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.showsHorizontalScrollIndicator = NO;
+
+
+    CGFloat labelx = 32;
+    NSInteger index = 0;
+    for (NSString *room in self.datas) {
+        AYSIotRoomLabel *label = [[AYSIotRoomLabel alloc] initWithText:room];
+        __weak typeof(label) weakLabel = label;
+        [label setTouch:^{
+            if (weakLabel.tag == self.currentIndex) {
+                return ;
+            }
+            weakLabel.scale = 1;
+            AYSIotRoomLabel *currentLable = self.scrollView.subviews[self.currentIndex];
+            currentLable.scale = 0;
+            self.currentIndex = weakLabel.tag;
+            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.currentIndex inSection:0];
+            //滑动指定item
+            [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionRight animated:NO];
+            [self scrollViewContentOffset];
+        }];
+        [scrollView addSubview:label];
+        label.frame = CGRectMake(labelx, 0, label.bounds.size.width, 40);
+        labelx += label.frame.size.width+32;
+        label.tag = index;
+        index ++;
+    }
+
+    scrollView.contentSize = CGSizeMake(labelx, 40);
+
+    self.currentIndex = 0;
+    AYSIotRoomLabel * channelLabel = self.scrollView.subviews[self.currentIndex];
+    channelLabel.scale = 1;
+
+
+    self.lineView = [[UIView alloc] initWithFrame:CGRectMake(15, 30, 20, 2)];
+    self.lineView.backgroundColor = [UIColor redColor];
+    self.lineView.center = CGPointMake(channelLabel.center.x, self.scrollView.frame.size.height - self.lineView.frame.size.height);
+    [self.scrollView addSubview:self.lineView];
+}
+
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.datas.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    AYSIotRoomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    cell.contentView.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+    
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - UICollectionViewDelegate
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
+//    //获取可视范围的 items 的indexPath 数组
+    NSArray * indexPatchs = [self.collectionView indexPathsForVisibleItems];
 //
-//    [customAlert mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.width.mas_equalTo(268);
-//        make.height.mas_equalTo(185);
-//        make.top.mas_equalTo(100);
-//        make.centerX.equalTo(self.view.mas_centerX);
-//    }];
-//
-//
-//    NSLog(@"%@", NSStringFromCGRect(customAlert.frame));
-    
-    UIButton *button = [UIButton buttonWithType:(UIButtonTypeContactAdd)];
-    button.frame = CGRectMake(50, 100, 50, 50);
-    [self.view addSubview:button];
-    
-    [button addTarget:self action:@selector(clickButton:) forControlEvents:(UIControlEventTouchUpInside)];
-    
+    AYSIotRoomLabel * currentLabel = self.scrollView.subviews[self.currentIndex];
+
+    AYSIotRoomLabel * nextLabel = nil;
+
+    if (![currentLabel isKindOfClass:[AYSIotRoomLabel class]]) {
+        return;
+    }
+
+    for (NSIndexPath *indexPath in indexPatchs) {
+        if (indexPath.item != self.currentIndex) {
+            nextLabel = self.scrollView.subviews[indexPath.item];
+            break;
+        }
+    }
+    NSInteger offsetX = scrollView.contentOffset.x;
+
+    //计算缩放比
+    CGFloat nextScale = (CGFloat)offsetX / scrollView.frame.size.width - self.currentIndex;
+
+    CGFloat currentScale = 1 - nextScale;
+
+    currentLabel.scale = currentScale;
+
+    nextLabel.scale = nextScale;
+
+//    NSLog(@"当前 %f 下一个 %f offsetx %lf",currentScale,nextScale, (CGFloat)offsetX / scrollView.frame.size.width);
+    self.currentIndex = offsetX / scrollView.frame.size.width;
+
+    // 宽度变化
+    CGFloat moveW = (nextLabel.frame.size.width - currentLabel.frame.size.width) *nextScale;
+    // X的改变值
+    CGFloat moveX =(nextLabel.frame.origin.x - currentLabel.frame.origin.x) * nextScale + 0.25;
+    CGFloat lineX = currentLabel.frame.origin.x + moveX ;
+    CGFloat lineY = self.lineView.frame.origin.y;
+    CGFloat lineW = currentLabel.frame.size.width + moveW;
+    CGFloat lineH = self.lineView.frame.size.height;
+    self.lineView.frame = CGRectMake(lineX, lineY, lineW, lineH);
+}
+
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self scrollViewContentOffset];
+
+    for (UIView *view in self.scrollView.subviews) {
+        if (self.currentIndex != view.tag) {
+            if ([view isKindOfClass:[AYSIotRoomLabel class]]) {
+                AYSIotRoomLabel *label = (AYSIotRoomLabel *)view;
+                label.scale = 0;
+            }
+        }
+    }
+
+}
+
+//- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+//    [self.selectView endDecelerating];
+//}
+
+-(void)scrollViewContentOffset {
+
+    AYSIotRoomLabel * label = self.scrollView.subviews[self.currentIndex];
+
+    CGFloat offsetX = label.center.x - self.view.center.x;
+
+    CGFloat maxOffsetX = self.scrollView.contentSize.width - self.scrollView.bounds.size.width;
+
+    if (offsetX <0) {
+        offsetX = 0;
+    } else if (offsetX > maxOffsetX) {
+        offsetX = maxOffsetX;
+    }
+
+    [UIView animateWithDuration:0.25 animations:^{
+        self.lineView.center = CGPointMake(label.center.x, self.scrollView.frame.size.height - self.lineView.frame.size.height);
+    }];
+    [ self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+
 }
 
 - (void)clickButton:(UIButton *)sender {
     
     
-    [AYSIotAlertTool showMessageAlert:self text:@"解绑成功解绑成功解绑成功解绑成功解绑成功解绑成功解绑成功解绑成功解绑成功解绑成功"];
+//    [AYSIotAlertTool showMessageAlert:self text:@"解绑成功解绑成功解绑成功解绑成功解绑成功解绑成功解绑成功解绑成功解绑成功解绑成功"];
     
 //    AYSIotAlertButtonConfigure *left = [[AYSIotAlertButtonConfigure alloc] init];
 //    left.title = @"解绑";
@@ -136,11 +289,11 @@
 //        NSLog(@"取消");
 //    }];
     
-//    [AYSIotAlertTool showIotTextField:self title:@"修改网关名称" message:@"当前网关名称是-APP测试" placeholder:@"请输入新的网关名称" isSecureTextEntry:NO keyboardType:(UIKeyboardTypeDefault) confirm:^(NSString * _Nonnull text) {
-//        NSLog(@"%@", text);
-//    } cancel:^{
-//        NSLog(@"取消");
-//    }];
+    [AYSIotAlertTool showIotTextField:self title:@"修改网关名称" message:@"当前网关名称是-APP测试" placeholder:@"请输入新的网关名称" isSecureTextEntry:NO keyboardType:(UIKeyboardTypeDefault) confirm:^(NSString * _Nonnull text) {
+        NSLog(@"%@", text);
+    } cancel:^{
+        NSLog(@"取消");
+    }];
     
 }
 
@@ -241,11 +394,6 @@
         }];
 }
 
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-}
 
 int count = 1;
 - (void)clickButton {

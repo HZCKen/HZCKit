@@ -39,6 +39,7 @@
 		186DAB042112990E004DCEFC /* NSString+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAAFE2112990D004DCEFC /* NSString+HZCKit.m */; };
 		186DAB0A21129B47004DCEFC /* UILabel+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */; };
 		186DAB0D2112D370004DCEFC /* NSAttributedString+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */; };
+		186E2E07248600BA00ECB483 /* AYSIotRoomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E2E06248600BA00ECB483 /* AYSIotRoomCollectionViewCell.m */; };
 		1878F83F211C17A100B423F9 /* NSObject+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1878F83E211C17A100B423F9 /* NSObject+HZCKit.m */; };
 		188D442C2297A0C1001EFAAC /* HZCMenuLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D442B2297A0C1001EFAAC /* HZCMenuLabel.m */; };
 		18953EC72238FCA7001308FC /* UITableView+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953EC62238FCA7001308FC /* UITableView+HZCKit.m */; };
@@ -47,6 +48,7 @@
 		18A254FA247F8D23004BE475 /* AYSIotTwoButtonAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A254F9247F8D23004BE475 /* AYSIotTwoButtonAlertView.xib */; };
 		18A254FD247FA037004BE475 /* AYSIotAlertButtonConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A254FC247FA037004BE475 /* AYSIotAlertButtonConfigure.m */; };
 		18D6E3C72480A0AC00820580 /* AYSIotLabelAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6E3C62480A0AC00820580 /* AYSIotLabelAlertView.m */; };
+		18D6E3CA2480B38D00820580 /* AYSIotTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6E3C92480B38D00820580 /* AYSIotTextField.m */; };
 		18DBB07E247E04FE001F7626 /* AYSIotWindowSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBB07D247E04FE001F7626 /* AYSIotWindowSliderView.m */; };
 		18DBB081247E0C7C001F7626 /* AYSIotSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBB080247E0C7C001F7626 /* AYSIotSliderView.m */; };
 		18DF187023D825DC00A925E4 /* UINavigationBar+HZCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF186F23D825DC00A925E4 /* UINavigationBar+HZCKit.m */; };
@@ -156,6 +158,8 @@
 		186DAB0921129B47004DCEFC /* UILabel+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HZCKit.m"; sourceTree = "<group>"; };
 		186DAB0B2112D370004DCEFC /* NSAttributedString+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+HZCKit.h"; sourceTree = "<group>"; };
 		186DAB0C2112D370004DCEFC /* NSAttributedString+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+HZCKit.m"; sourceTree = "<group>"; };
+		186E2E05248600BA00ECB483 /* AYSIotRoomCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotRoomCollectionViewCell.h; sourceTree = "<group>"; };
+		186E2E06248600BA00ECB483 /* AYSIotRoomCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotRoomCollectionViewCell.m; sourceTree = "<group>"; };
 		1878F83D211C17A100B423F9 /* NSObject+HZCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HZCKit.h"; sourceTree = "<group>"; };
 		1878F83E211C17A100B423F9 /* NSObject+HZCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HZCKit.m"; sourceTree = "<group>"; };
 		188D442A2297A0C1001EFAAC /* HZCMenuLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCMenuLabel.h; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 		18A254FC247FA037004BE475 /* AYSIotAlertButtonConfigure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotAlertButtonConfigure.m; sourceTree = "<group>"; };
 		18D6E3C52480A0AC00820580 /* AYSIotLabelAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotLabelAlertView.h; sourceTree = "<group>"; };
 		18D6E3C62480A0AC00820580 /* AYSIotLabelAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotLabelAlertView.m; sourceTree = "<group>"; };
+		18D6E3C82480B38D00820580 /* AYSIotTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotTextField.h; sourceTree = "<group>"; };
+		18D6E3C92480B38D00820580 /* AYSIotTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotTextField.m; sourceTree = "<group>"; };
 		18DBB07C247E04FE001F7626 /* AYSIotWindowSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotWindowSliderView.h; sourceTree = "<group>"; };
 		18DBB07D247E04FE001F7626 /* AYSIotWindowSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYSIotWindowSliderView.m; sourceTree = "<group>"; };
 		18DBB07F247E0C7C001F7626 /* AYSIotSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYSIotSliderView.h; sourceTree = "<group>"; };
@@ -351,12 +357,16 @@
 				18564534247F5252002495B9 /* AYSIotCustomTextFieldAlertView.h */,
 				18564535247F5252002495B9 /* AYSIotCustomTextFieldAlertView.m */,
 				18564537247F528D002495B9 /* AYSIotCustomAlertView.xib */,
+				18D6E3C82480B38D00820580 /* AYSIotTextField.h */,
+				18D6E3C92480B38D00820580 /* AYSIotTextField.m */,
 				BE31AD8F246F6FA40095E3E6 /* ViewController2.h */,
 				BE31AD90246F6FA40095E3E6 /* ViewController2.m */,
 				BE31AD8C246F6F920095E3E6 /* ViewController1.h */,
 				BE31AD8D246F6F920095E3E6 /* ViewController1.m */,
 				18218A312477783700B4C9D1 /* AYSIotRoomLabel.h */,
 				18218A322477783700B4C9D1 /* AYSIotRoomLabel.m */,
+				186E2E05248600BA00ECB483 /* AYSIotRoomCollectionViewCell.h */,
+				186E2E06248600BA00ECB483 /* AYSIotRoomCollectionViewCell.m */,
 				186DAAC1211295DA004DCEFC /* ViewController.h */,
 				BE31AD92246F6FBC0095E3E6 /* ViewController3.h */,
 				BE31AD93246F6FBC0095E3E6 /* ViewController3.m */,
@@ -618,7 +628,9 @@
 				18564531247F4F0D002495B9 /* ScottBaseAnimation.m in Sources */,
 				188D442C2297A0C1001EFAAC /* HZCMenuLabel.m in Sources */,
 				1878F83F211C17A100B423F9 /* NSObject+HZCKit.m in Sources */,
+				18D6E3CA2480B38D00820580 /* AYSIotTextField.m in Sources */,
 				186DAB022112990E004DCEFC /* NSMutableAttributedString+HZCKit.m in Sources */,
+				186E2E07248600BA00ECB483 /* AYSIotRoomCollectionViewCell.m in Sources */,
 				18EAF76221CCE28A009660C1 /* UIView+HZCKit.m in Sources */,
 				1856452E247F4F0D002495B9 /* UIView+ScottAutoLayout.m in Sources */,
 				1856452B247F4F0D002495B9 /* UIView+ScottAlertView.m in Sources */,

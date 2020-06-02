@@ -7,13 +7,14 @@
 //
 
 #import "AYSIotCustomTextFieldAlertView.h"
+#import "AYSIotTextField.h"
 #import "UIView+HZCKit.h"
 
 @interface AYSIotCustomTextFieldAlertView ()
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet AYSIotTextField *textField;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 
@@ -37,7 +38,9 @@
     self.confirmButton.layer.borderWidth = 1.0f;
     self.confirmButton.layer.cornerRadius = 5.3;
     self.confirmButton.layer.borderColor = [UIColor colorWithRed:187 /255.0 green:187 /255.0 blue:187 /255.0 alpha:1].CGColor;
-
+    
+    // 光标颜色
+    self.textField.tintColor = [UIColor colorWithRed:44 / 255.0 green:99/255.0 blue:216/255.0 alpha:1];
 }
 
 - (IBAction)clickCloseButton:(UIButton *)sender {

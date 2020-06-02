@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AYSIotRoomLabel : UILabel
 
+/** <#Description#> */
+@property (nonatomic, copy) void (^touch)(void);
+
+@property (nonatomic, assign) CGFloat scale;
+
+- (instancetype)initWithText:(NSString *)text;
+
 @end
 
 NS_ASSUME_NONNULL_END
