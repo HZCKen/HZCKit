@@ -22,6 +22,7 @@
 #import "UINavigationBar+HZCKit.h"
 #import "UIImageView+HZCKit.h"
 #import "HZCBaseViewController.h"
+#import "UITableViewCell+HZCKit.h"
 
 #define IPHONE_X \
 ({BOOL isIphoneX = NO; \
