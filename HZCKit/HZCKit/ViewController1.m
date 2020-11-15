@@ -45,54 +45,11 @@
 
 @implementation ViewController1
 
-- (void)bytesplit2byte:(Byte[])src orc:(Byte[])orc begin:(NSInteger)begin count:(NSInteger)count{
-    
-    memset(orc, 0, sizeof(char)*count);
-    
-    for (NSInteger i = begin; i < begin+count; i++){
-        orc[i-begin] = src[i];
-    }
-    
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    Byte AES_KEY[] = { 0xc0, 0xd7, 0x79, 0x98, 0x58, 0x5b, 0x58, 0x5a, 0x9e, 0x4c, 0xd7, 0xdc, 0x77, 0x6b, 0xa3, 0xa4 };
-
-//    printf("==== %hhu", AES_KEY[1]);
-    
-    Byte orc[] = {};
-    
-    [self bytesplit2byte:AES_KEY orc:orc begin:0 count:sizeof(AES_KEY)];
-//    printf("%s\n", orc);
-//
-////    NSLog(@"%s", orc);
-//
-//    printf("%s", AES_KEY);
-    
-    NSData *data = [NSData dataWithBytes:AES_KEY length:16];
-    NSLog(@"%@", data);
-    NSData *orcData = [NSData dataWithBytes:AES_KEY length:sizeof(AES_KEY)];
-    NSLog(@"%@",orcData);
-    
-    Byte *testB = (Byte *)[data bytes];
-    for (int i = 0; i < [data length]; i++) {
-        printf("testByte = %d\n",testB[i]);
-    }
-    
-//    NSString *testString = @"ABC";
-//
-//    NSData *testData = [testString dataUsingEncoding: NSUTF8StringEncoding];
-//
-//    Byte *testByte = (Byte *)[data bytes];
-//
-//    for(int i=0;i<[testData length];i++){
-//        printf("testByte = %d\n",testByte[i]);
-//    }
-
     NSArray *datas = @[@"客厅", @"儿童房", @"客厅",@"客厅",@"健身室", @"厨房" ];
     self.datas = datas;
 
@@ -121,7 +78,7 @@
 {
     self.layout.itemSize = self.collectionView.bounds.size;
 
-//    NSLog(@"%@",NSStringFromCGRect(self.collectionView.bounds));
+    NSLog(@"%@",NSStringFromCGRect(self.collectionView.bounds));
 
     self.layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
 
