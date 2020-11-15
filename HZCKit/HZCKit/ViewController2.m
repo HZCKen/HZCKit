@@ -122,8 +122,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    [cell hzc_cornerCard:10 tableView:tableView indexPath:indexPath];
-    
+
+    [cell hzc_cornerCard:8 space:16 tableView:tableView indexPath:indexPath];
 }
 
 
